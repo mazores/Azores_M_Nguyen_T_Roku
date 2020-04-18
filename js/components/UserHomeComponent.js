@@ -34,17 +34,17 @@ export default {
             mediaTypes: [
                 {
                     iconClass: "fas fa-film",
-                    descritpion: "Movies",
+                    description: "Movies",
                     component: VideoComponent
                 },
                 {
                     iconClass: "fas fa-tv",
-                    descritpion: "Television",
+                    description: "Television",
                     component: VideoComponent
                 },
                 {
                     iconClass: "fas fa-headphones",
-                    descritpion: "Music",
+                    description: "Music",
                     component: AudioComponent
                 }
             ]
