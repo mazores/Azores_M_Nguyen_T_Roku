@@ -42,8 +42,8 @@ function getMoviesByFilter($args)
 
     $results = $pdo->query($filterQuery);
 
-    echo $filterQuery;
-    exit;
+    // echo $filterQuery;
+    // exit;
 
     if ($results) {
         return $results;
