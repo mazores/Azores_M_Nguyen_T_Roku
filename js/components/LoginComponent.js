@@ -18,6 +18,7 @@ export default {
                         </div>
 
                         <div class="col-auto my-1">
+                            <p>{{this.message}}</p>
                             <button v-on:click.prevent="login()" type="submit" class="btn btn-primary">Go!</button>
                         </div>
                     </div>
@@ -30,8 +31,9 @@ export default {
         return {
             input: {
                 username: "",
-                password: ""
-            },
+                password: "",
+                message: ""
+            }
 
         }
     },
