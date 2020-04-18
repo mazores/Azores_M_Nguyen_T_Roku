@@ -3,6 +3,7 @@ import TVComponent from "./TVComponent.js";
 import MusicComponent from "./MusicComponent.js";
 
 
+
 export default {
     name: "TheUserHomeComponent",
 
@@ -16,7 +17,7 @@ export default {
         <div class="row"> <!-- 2-up for nav and media info -->
             <nav class="col-12 col-sm-3 side-nav">
                 <ul class="media-type">
-                    <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component)">
+                    <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component); showAllDetails()">
                         <span>
                             <i v-bind:class="[media.iconClass]"></i>
                         </span>
@@ -55,6 +56,17 @@ export default {
     methods: {
         switchMedia(theComponent) {
             this.activeComponent = theComponent;
+        },
+
+        toSingleDetail() {
+            this.singleDetail = !this.singleDetail;
+        },
+
+        showAllDetails() {
+            if ( this.singleDetail == false ) {
+
+            }
+            
         }
     }
 }
