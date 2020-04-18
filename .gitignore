@@ -1,5 +1,5 @@
 .vscode
 *.zip
-_DS_Store
+*._DS_Store
 node_modules
-.mp4
+*.mp4
