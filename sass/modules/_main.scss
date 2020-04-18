@@ -7,7 +7,8 @@ body {
 	background-color: black;
 	color: white;
 	margin-bottom: 100px;
-	background: url(../images/gunmetal.jpg) repeat;
+	// background: url(../images/gunmetal.jpg) repeat;
+	
 }
 
 a {
@@ -71,3 +72,7 @@ nav:not(.side-nav) {
 }
 
 .user-message { text-align: center; font-size: 2rem; }
+
+.hide {
+	display: none!important;
+}
