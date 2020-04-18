@@ -33,6 +33,7 @@ import UserHomeComponent from './components/UserHomeComponent.js';
         this.$router.push({ name: "login" });
         this.authenticated = false;
 
+        // When user's gone then remove the cached videos (refer to Video Component)
         if (localStorage.getItem("cachedUser")) {
           localStorage.removeItem("cachedUser");
         }

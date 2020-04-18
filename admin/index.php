@@ -6,7 +6,7 @@
 
     if (isset($_GET['media'])) { 
         $tbl = "tbl_" . trim($_GET["media"]);
-        echo $tbl;
+        // echo $tbl;
     }
 
     if(isset($_GET['filter'])) {
