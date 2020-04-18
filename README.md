@@ -1,44 +1,35 @@
 # Roku Flashback Project
-
+======
 ### Take a trip back to yesteryear with your old audio, tv and film faves!
+The Roku Flashback App is a streaming service under Roku. Through this app, you can stream movies, television, or music from different eras.
 
-#### Setup
-You have some options - Docker, or old school. 
+# Setup
+======
+## PHP
+1. Clone repo to your localhost location (htdocs, www directory or wherever your local server expects to find your files) with <code> git clone </code>.
+2. Start MAMP/WAMP
+3. Create a new db in PHPMyAdmin with the name <code> db_roku </code>
+4. Import the database from <code> /db </code> folder
 
-If you're using a traditional PHP platform, then clone the repo to your localhost location (htdocs, www directory or wherever your local server expects to find your files).
+## Docker
+1. Get Docker [here](http://www.docker.com).
+2. In terminal, cd into the project directory
+3. <code> docker-compose up </code>
+4. When done,<code> docker-compose down </code>
 
-This is built with PHP on the back end, so you can either install the db_movies database with the tool of your choice, or drop the crutches and use the command line!. Configure your connection settings and you're ready to go.
+# Tools
+======
+* HTML5
+* CSS3 & SASS
+* Vue (bare bones - no webpack!)
+* vue-router
+* Boostrap 4
+* PHP
+* JavaScript (no jQuery!)
+* Gulp 
+⋅⋅* (Check <code>gulpfile.js</code> for reference. NPM install should get you up and running with your dev tools.)
 
-Or you can let Docker do its thing.  
-
-If you don't have Docker installed, you'll need to get it [here](http://www.docker.com).
-
-CD into the project directory and run docker-compose up  
-When you're done, run docker-compose down
-
-Your app is running on http://localhost:8010  
-phpmyadmin is running on http://localhost:8011
-
-
-#### Dependencies:
-We've rolled our own PHP - no frameworks, just some classes and a bit of procedural code.
-
-We use Vue on the front end, but not the CLI or webpack - just Vue with ES6 modules. Also - no jQuery, just plain old JavaScript.
-
-We use Gulp for tooling - check <code>gulpfile.js</code> for reference. NPM install should get you up and running with your dev tools.
-
-We also use SASS.
-
-#### Built with:
-Vue (bare bones - no webpack!)
-
-vue-router
-
-Boostrap 4
-
-PHP
-
-JavaScript
-
-#### Authors / Dev Team:
-TVR and SpiderPan
+# Team
+======
+* Mikka Azores - Developer
+* Megan Nguyen - Designer
