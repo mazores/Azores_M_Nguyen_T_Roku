@@ -52,25 +52,27 @@ $roku-purple: #6C3C97;
     transform: translateY(-50%);
 }
 
+@media screen and (min-width: 768px) {
+    h1 {
+        font-size: 60px;
+    }
+    
+    h2 {
+        font-size: 40px;
+    }
+    
+    p {
+        font-size: 22px;
+        font-weight: 300;
+    }
+    
+    // Movie Detail & Comments
+    p.detail {
+        font-size: 18px;
+    }
+    
+    p.footer {
+        font-size: 14px;
+    }
+}
 
-// h1 {
-//     font-size: 60px;
-// }
-
-// h2 {
-//     font-size: 40px;
-// }
-
-// p {
-//     font-size: 22px;
-//     font-weight: 300;
-// }
-
-// // Movie Detail & Comments
-// p.detail {
-//     font-size: 18px;
-// }
-
-// p.footer {
-//     font-size: 14px;
-// }

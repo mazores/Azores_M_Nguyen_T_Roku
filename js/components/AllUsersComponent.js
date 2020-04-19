@@ -2,8 +2,8 @@ import UserComponent from './UserComponent.js';
 
 export default {
 	template: `
-	<div class="container-fluid d-flex flex-column" id="allusers" style="height: 100vh">
-		<div class="row d-flex align-items-center justify-content-center my-auto py-auto">
+	<div class="container-fluid d-flex flex-column pt-5" id="allusers" style="height: 100vh">
+		<div class="row d-flex align-items-center justify-content-center my-auto py-auto mx-md-4 mx-lg-5">
 			<div class="col-sm-12">
 				<h1 class="user-message">{{ message }}</h1>
 			</div>
