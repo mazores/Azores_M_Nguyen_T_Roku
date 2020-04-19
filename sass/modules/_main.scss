@@ -8,19 +8,32 @@ body {
 	color: white;
 	margin-bottom: 100px;
 	// background: url(../images/gunmetal.jpg) repeat;
-    background-color: #C9D1E2;
-
+	background-color: #C9D1E2;
+	line-height: 1!important;
 }
 
 body.one {
-	// background: url(../images/background.svg);
-	// background-size: contain;
-    background-color: #C9D1E2;
-}
-body.two {
-    background: pink;
+	background: url(../images/background.jpg);
+	background-repeat: no-repeat!important;
+    background-size: cover!important;
 }
 
+body.two {
+	background: url(../images/background2.jpg)!important;
+	background-repeat: no-repeat!important;
+    background-size: cover!important;
+    // background: pink;
+}
+body.three {
+	background: url(../images/Background3.jpg)!important;
+	background-repeat: no-repeat!important;
+	background-size: cover!important;
+	background-position: right!important;
+    // background: pink;
+}
+ul {
+	list-style-type: none;
+}
 
 a {
 	color: #00B7FF;
@@ -44,36 +57,6 @@ header {
 	}
 }
 
-nav:not(.side-nav) {
-	ul {
-		right: 3em;
-		list-style-type: none;
-		margin-bottom: 0;
-
-		li {
-			display: inline-block;
-			font-size: 1.75em;
-			padding: 0 0.2em;
-			cursor: pointer;
-		}
-	}
-}
-
-.toast {
-	position: absolute;
-	right: 1em;
-	top: 4.25rem;
-	z-index: 200;
-	color: #333;
-	min-width: 175px;
-
-	.toast-body {
-		span { margin-left: 0.8rem; position: relative; top: -2px; font-weight: bolder; }
-	}
-}
-
-.fa-exclamation-triangle { color: red; font-size: 1.5em; }
-
 // #login > div:first-of-type { padding-top: 200px; }
 
 // resets for small sizes
@@ -90,4 +73,24 @@ nav:not(.side-nav) {
 
 .center {
 	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	body.one {
+		background: url(../images/background_desktop.jpg);
+		background-position: 80%!important;
+	}
+	
+	body.two {
+		background: url(../images/Background2_desktop.jpg)!important;
+		background-repeat: no-repeat!important;
+		background-size: cover!important;
+		background-position: center!important;
+		// background: pink;
+	}
+
+	body.three {
+		background: url(../images/Background3_desktop.jpg)!important;
+		background-position: center!important;
+	}
 }

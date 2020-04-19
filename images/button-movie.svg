@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 435 147" style="enable-background:new 0 0 435 147;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:url(#Rectangle_1_);}
+	.st2{fill:url(#Path_11_);}
+	.st3{fill:url(#Path_12_);}
+	.st4{fill:#FFDDA9;stroke:#FFFFFF;stroke-width:6;}
+	.st5{fill:#FFFFFF;stroke:#FFFFFF;stroke-width:24;stroke-linecap:round;stroke-linejoin:round;}
+	.st6{fill:#F7768A;stroke:#F7768A;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;}
+	.st7{fill:#F7768A;stroke:#F7768A;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;}
+	.st8{fill:#FFFFFF;stroke:#FFDDA9;stroke-width:3;}
+	.st9{fill:none;stroke:#FFFFFF;stroke-width:3;}
+	.st10{fill:#FFFFFF;}
+	.st11{font-family:'Bangers-Regular';}
+	.st12{font-size:70px;}
+</style>
+<desc>Created with Sketch.</desc>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M399.2,147H35.8C16,147,0,131,0,111.2V35.8C0,16,16,0,35.8,0h363.5C419,0,435,16,435,35.8v75.5
+			C435,131,419,147,399.2,147z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Page-4" class="st0">
+		<g id="_x34_th_x5F_parents" transform="translate(-978.000000, -167.000000)">
+			<g id="movie100" transform="translate(670.000000, 167.000000)">
+				<g transform="translate(257.000000, -207.000000)">
+					<g id="Music" transform="translate(0.000000, 169.000000)">
+						
+							<linearGradient id="Rectangle_1_" gradientUnits="userSpaceOnUse" x1="-370.1897" y1="470.9508" x2="-369.1897" y2="470.9508" gradientTransform="matrix(520.7992 0 0 -520.7992 192794.5 245531.2188)">
+							<stop  offset="0" style="stop-color:#F7768A"/>
+							<stop  offset="1" style="stop-color:#9371BF"/>
+						</linearGradient>
+						<rect id="Rectangle" class="st1" width="520.8" height="520.8"/>
+					</g>
+					
+						<linearGradient id="Path_11_" gradientUnits="userSpaceOnUse" x1="-369.7095" y1="639.7078" x2="-368.7095" y2="639.7078" gradientTransform="matrix(327 0 0 -361 120921 231300)">
+						<stop  offset="0" style="stop-color:#F7768A"/>
+						<stop  offset="1" style="stop-color:#FFDDA9"/>
+					</linearGradient>
+					<path id="Path" class="st2" d="M26,546c0,0,22.2-338.2,327-361H26V546z"/>
+					
+						<linearGradient id="Path_12_" gradientUnits="userSpaceOnUse" x1="-369.1732" y1="639.7186" x2="-368.1732" y2="639.7186" gradientTransform="matrix(231 0 0 -366 85561 234320)">
+						<stop  offset="0" style="stop-color:#9371BF"/>
+						<stop  offset="0.14" style="stop-color:#9385C7"/>
+						<stop  offset="0.54" style="stop-color:#94B9DD"/>
+						<stop  offset="0.83" style="stop-color:#95D9EB"/>
+						<stop  offset="1" style="stop-color:#95E5F0"/>
+					</linearGradient>
+					<path id="Path_1_" class="st3" d="M513,0c0,0-27.5,326.4-231,366h231V0z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<g id="Page-4_1_">
+	<g id="_x34_th_x5F_parents_1_" transform="translate(-1058.000000, -181.000000)">
+		<g id="movie100_1_" transform="translate(670.000000, 167.000000)">
+			<g id="popcorn" transform="translate(394.000000, 17.000000)">
+				<path id="Path_10_" class="st4" d="M68.4,45.4c0,0-3.4-12.7,8.8-14c0,0-0.8-15.2,15-8.8c0,0,1.5-10.9,13.7-9.8
+					s12.2,9.8,11.8,16.2c0,0,19-2.2,13.3,16.3L118.6,58l-26.4,8.7l-22-15L68.4,45.4z"/>
+				<polygon id="Path_9_" class="st5" points="65,54.4 98.7,66.2 134,52.8 123.9,106.7 100.4,117.8 75.6,105.9 				"/>
+				<polygon id="Path_2_" class="st6" points="59,50.8 69.5,106 77,109.8 71.9,55.9 				"/>
+				<polygon id="Path_3_" class="st7" points="79,58.8 84.2,113.1 93,117.8 93,64.4 				"/>
+				<polygon id="Path_4_" class="st7" points="100,67 115,60.8 111.7,115.8 100.6,120.8 				"/>
+				<polygon id="Path_5_" class="st7" points="124.7,55.2 138,49.8 129,106.4 121,110.8 				"/>
+				<path id="Path_6_" class="st8" d="M141.2,103.5c0,0-4.6,2.8-2.7-3.4c0,0-0.5-8.8,6.6-7.1c7.1,1.7,2.4,10,2.4,10s1,1.9-0.7,2.6
+					C145.1,106.4,141.2,103.5,141.2,103.5z"/>
+				<path id="Path_7_" class="st8" d="M122.7,126.9c0,0-2.3,3.8-5.3,0.5c-3-3.3-1.9-15.6,7.1-15.6c8.9,0,8,13.8,6.5,14.9
+					c0,0,1.1,1.6-1.3,2.8C127.4,130.6,122.7,128.6,122.7,126.9z"/>
+				<path id="Path_8_" class="st9" d="M83.6,43.8c0,0-2.9-9.1,4.3-12.2s12.1,3,12.9,6.7c0,0,12.4-8.4,11.1,4.5"/>
+			</g>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 187.2442 98.7498)" class="st10 st11 st12">MOVIES</text>
+</svg>

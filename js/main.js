@@ -45,6 +45,10 @@ import Home from './components/Home.js';
           localStorage.removeItem("cachedVideo");
         }
 
+        if (localStorage.getItem("cachedTV")) {
+          localStorage.removeItem("cachedTV");
+        }
+
         if (localStorage.getItem("cachedTVKids")) {
           localStorage.removeItem("cachedTVKids");
         }

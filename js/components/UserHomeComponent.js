@@ -10,25 +10,21 @@ export default {
     props: ['permissions', 'activeMedia'],
 
     template: `
-    <div class="container">
-        <component :is="this.activeComponent" :permissions="access.admin"></component>
+        <div class="container-fluid pt-5" id="media">
+            <div class="row pt-5">
+                <!-- show media icons here -->
+                <div class="icon-home col-4 px-1 px-md-3 mt-md-5 mt-lg-5" v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component)">
+                    <img :src="'./images/button-'+ media.icon">
+                </div>
 
-        <!-- show media icons here -->
-        <div class="row"> <!-- 2-up for nav and media info -->
-            <nav class="col-12 col-sm-3 side-nav">
-                <ul class="media-type">
-                    <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component); showAllDetails()">
-                        <span>
-                            <i v-bind:class="[media.iconClass]"></i>
-                        </span>
-                        
-                        <span class="d-none d-md-block">{{ media.description }}</span>
-                    </li>
-                </ul>
-            </nav>
+        <component :is="this.activeComponent" :permissions="access.admin" class="col-12"></component>
         </div>
     </div>
     `,
+
+    beforeCreate: function() {
+        document.body.className = 'three';
+    },
 
     data: function() {
         return {
@@ -36,18 +32,18 @@ export default {
             access: this.permissions,
             mediaTypes: [
                 {
-                    iconClass: "fas fa-film",
                     description: "Movies",
+                    icon: "movie.svg",
                     component: MovieComponent
                 },
                 {
-                    iconClass: "fas fa-tv",
                     description: "Television",
+                    icon: "tv.svg",
                     component: TVComponent
                 },
                 {
-                    iconClass: "fas fa-headphones",
                     description: "Music",
+                    icon: "music.svg",
                     component: MusicComponent
                 }
             ]
@@ -61,13 +57,6 @@ export default {
 
         toSingleDetail() {
             this.singleDetail = !this.singleDetail;
-        },
-
-        showAllDetails() {
-            if ( this.singleDetail == false ) {
-
-            }
-            
         }
     }
 }

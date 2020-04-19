@@ -38,7 +38,7 @@
         
         li { 
             padding: 1rem;
-            border-bottom: thin solid $dark-bg;
+            border-bottom: thin solid $gray;
             cursor: pointer;
             display: block;
             width: auto;
@@ -59,7 +59,7 @@
             }
         }
     
-        li:hover span:first-of-type { color: $roku-purple }
+        li:hover span:first-of-type { color: $purple }
     
         li:last-of-type { border-bottom: none; }
     }
