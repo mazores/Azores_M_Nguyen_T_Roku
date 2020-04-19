@@ -3,9 +3,9 @@
 html { position: relative; min-height: 100%; }
 
 body {
-	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-	background-color: white;
-	// color: white;
+	font-family: $Muli;
+	// background-color: white;
+	color: white;
 	margin-bottom: 100px;
 	// background: url(../images/gunmetal.jpg) repeat;
 	
@@ -17,9 +17,9 @@ a {
 }
 
 header {
-	background-color:$dark-bg;
+	background-color: transparent;
 	padding: 12px 14px;
-	position: fixed;
+	position: absolute!important;
 	z-index: 500;
 	width: 100%; 
 
@@ -63,7 +63,7 @@ nav:not(.side-nav) {
 
 .fa-exclamation-triangle { color: red; font-size: 1.5em; }
 
-.container > div:first-of-type { margin-top: 53px; }
+// #login > div:first-of-type { padding-top: 200px; }
 
 // resets for small sizes
 
@@ -75,4 +75,8 @@ nav:not(.side-nav) {
 
 .hide {
 	display: none!important;
+}
+
+.center {
+	text-align: center;
 }

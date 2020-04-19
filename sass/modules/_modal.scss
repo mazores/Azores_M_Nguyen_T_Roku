@@ -1,0 +1,34 @@
+.modal-content {
+    border: 0 none!important;
+    border-radius: 30px !important;
+    outline: 0;
+    padding: 15px;
+
+    h1 {
+        color: $purple!important;
+    }
+}
+
+.modal-header {
+    border: none!important;
+    padding: 30px 30px 0 30px!important;
+}
+
+.close {
+    color: $lighterpurple!important;
+}
+
+@media screen and (min-width: 1024px) {
+    .modal-content {
+        padding: 30px!important;
+        border-radius: 50px !important;
+    }
+
+    .modal-header {
+        padding: 40px 75px 0 75px !important;
+    }
+
+    .form-control {
+        padding: 30px!important;
+    }
+}
