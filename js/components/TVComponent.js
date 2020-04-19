@@ -3,7 +3,7 @@ import SingleMediaDetail from "./SingleMediaDetail.js";
 export default {
     name: "TheShowComponent",
 
-    // props: ['currentuser'],
+    props: ['currentuser'],
 
     template: `
     <section>
@@ -52,6 +52,7 @@ export default {
             allRetrievedVideos: [],
             singleDetail: false,
             detailComponent: SingleMediaDetail,
+            permissions: this.currentuser
         }
     },
 
@@ -74,38 +75,35 @@ export default {
                 })
         },
 
-        // getUserPermissions() {
-        //         this.liveuser = localStorage.getItem("cachedUser", JSON.stringify(this.liveuser));
-        //         this.liveuser = this.liveuser.admin;
-        // },
-
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
             // debugger;
 
             // You don't want to do this again and again because it will load longer. You only need to do it once, thus the local storag
 
-            // // If kid, show
-            // if (this.liveuser.admin == "0") {
-            //     if (localStorage.getItem("cachedTVKids")) {
-            //         this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedTVKids"));
+            // WORKING!!!!!!!!!!
+            // If kid, show
+            if (this.permissions == "0") {
+                // console.log('Kid!');
+                if (localStorage.getItem("cachedTVKids")) {
+                    this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedTVKids"));
     
-            //         this.currentMediaDetails = this.allRetrievedVideos[0];
+                    this.currentMediaDetails = this.allRetrievedVideos[0];
     
-            //     } else {
-            //         // If there's nothing in local storage then do this
-            //         let url =`./admin/index.php?media=tv&type=Kid`;
+                } else {
+                    // If there's nothing in local storage then do this
+                    let url =`./admin/index.php?media=tv&type=Kid`;
     
-            //         fetch(url) 
-            //             .then(res => res.json())
-            //             .then(data => {
-            //                 localStorage.setItem("cachedTVKids", JSON.stringify(data));
-            //                 this.allRetrievedVideos = data;
-            //                 this.currentMediaDetails = data[0];
-            //         })
-            //     }
-            // // If parents, show all
-            // } else {
+                    fetch(url) 
+                        .then(res => res.json())
+                        .then(data => {
+                            localStorage.setItem("cachedTVKids", JSON.stringify(data));
+                            this.allRetrievedVideos = data;
+                            this.currentMediaDetails = data[0];
+                    })
+                }
+            // If parents, show all
+            } else {
                 if (localStorage.getItem("cachedTV")) {
                     this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedTV"));
     
@@ -123,9 +121,8 @@ export default {
                             this.currentMediaDetails = data[0];
                     })
                 }
-            // }
+            }
             
-
             // We should remove this cache when the user's gone as they might have different permissions so go to main.js logout function
         },
 

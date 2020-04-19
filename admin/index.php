@@ -15,7 +15,20 @@
 
         // $tbl = "tbl_" . trim($_GET["type"]);
         // echo $tbl;
-    }  else {
+    }  
+
+    if ((isset($_GET['type'])) == 'Kid') { 
+        $type = trim($_GET["type"]);
+
+        $results = getMoviesByPermission($tbl, $type);
+        echo json_encode($results->fetchAll(PDO::FETCH_ASSOC));
+
+        // $tbl = "tbl_" . trim($_GET["type"]);
+        // echo $tbl;
+    }  
+    
+    
+    else {
         $results = getAll($tbl);
 
         echo json_encode($results);

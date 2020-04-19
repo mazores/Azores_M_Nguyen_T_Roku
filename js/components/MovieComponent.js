@@ -3,6 +3,8 @@ import SingleMediaDetail from "./SingleMediaDetail.js";
 export default {
     name: "TheMovieComponent",
 
+    props: ['currentuser'],
+
     template: `
     <section>
         <div class="col-12 col-sm-9 media-info">
@@ -49,7 +51,8 @@ export default {
             currentMediaDetails: {}, 
             allRetrievedVideos: [],
             singleDetail: false,
-            detailComponent: SingleMediaDetail
+            detailComponent: SingleMediaDetail,
+            permissions: this.currentuser
         }
     },
 
@@ -76,22 +79,48 @@ export default {
             // debugger;
 
             // You don't want to do this again and again because it will load longer. You only need to do it once, thus the local storage
-            if (localStorage.getItem("cachedVideo")) {
-                this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
-
-                this.currentMediaDetails = this.allRetrievedVideos[0];
-
+            
+            // If kid, show
+    
+            if (this.permissions == "0") {
+                // console.log('Kid!');
+                if (localStorage.getItem("cachedMovieKids")) {
+                    this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedMovieKids"));
+    
+                    this.currentMediaDetails = this.allRetrievedVideos[0];
+    
+                } else {
+                    // If there's nothing in local storage then do this
+                    let url =`./admin/index.php?media=movies&type=Kid`;
+    
+                    fetch(url) 
+                        .then(res => res.json())
+                        .then(data => {
+                            localStorage.setItem("cachedMovieKids", JSON.stringify(data));
+                            this.allRetrievedVideos = data;
+                            this.currentMediaDetails = data[0];
+                    })
+                }
+                
+            // If parents, show all
             } else {
-                // If there's nothing in local storage then do this
-                let url =`./admin/index.php?media=movies`;
-
-                fetch(url) 
-                    .then(res => res.json())
-                    .then(data => {
-                        localStorage.setItem("cachedVideo", JSON.stringify(data));
-                        this.allRetrievedVideos = data;
-                        this.currentMediaDetails = data[0];
-                })
+                if (localStorage.getItem("cachedVideo")) {
+                    this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedVideo"));
+    
+                    this.currentMediaDetails = this.allRetrievedVideos[0];
+    
+                } else {
+                    // If there's nothing in local storage then do this
+                    let url =`./admin/index.php?media=movies`;
+    
+                    fetch(url) 
+                        .then(res => res.json())
+                        .then(data => {
+                            localStorage.setItem("cachedVideo", JSON.stringify(data));
+                            this.allRetrievedVideos = data;
+                            this.currentMediaDetails = data[0];
+                    })
+                }
             }
 
             // We should remove this cache when the user's gone as they might have different permissions so go to main.js logout function

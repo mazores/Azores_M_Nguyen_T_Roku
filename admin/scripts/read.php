@@ -47,6 +47,23 @@ function getMoviesByFilter($tbl, $decade)
     }
 }
 
+function getMoviesByPermission($tbl, $type)
+{
+    $pdo = Database::getInstance()->getConnection();
+    $query = "SELECT * FROM $tbl WHERE permission = '$type'";
+
+    $results = $pdo->query($query);
+
+    // echo $filterQuery;
+    // exit;
+
+    if ($results) {
+        return $results;
+    } else {
+        return 'There was a problem accessing this info';
+    }
+}
+
 // function getMoviesByFilter($args)
 // {
 //     $pdo = Database::getInstance()->getConnection();
