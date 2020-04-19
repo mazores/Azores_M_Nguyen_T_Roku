@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="252px" height="311px" viewBox="0 0 252 311" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.1 (72631) - https://sketchapp.com -->
+    <title>tv</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="3nd_parents" transform="translate(-121.000000, -1101.000000)">
+            <g id="shows" transform="translate(28.000000, 1081.000000)">
+                <g id="series100" transform="translate(-10.000000, -11.000000)">
+                    <g id="tv" transform="translate(116.000000, 31.000000)">
+                        <rect id="Rectangle" fill="#F9E487" fill-rule="nonzero" x="45.1197403" y="139" width="35" height="150"></rect>
+                        <rect id="Rectangle" fill="#F7768A" fill-rule="nonzero" x="80.1197403" y="139" width="35" height="150"></rect>
+                        <rect id="Rectangle" fill="#95E5F0" fill-rule="nonzero" x="113.11974" y="139" width="35" height="150"></rect>
+                        <rect id="Rectangle" fill="#FFDDA9" fill-rule="nonzero" x="148.11974" y="139" width="35" height="150"></rect>
+                        <rect id="Rectangle" fill="#C68DDE" fill-rule="nonzero" x="180.11974" y="139" width="35" height="150"></rect>
+                        <rect id="Rectangle" fill="#9371BF" fill-rule="nonzero" x="11.1197403" y="139" width="35" height="150"></rect>
+                        <rect id="Rectangle" stroke="#FFFFFF" stroke-width="25" x="0.11974026" y="131" width="226" height="167" rx="59.2"></rect>
+                        <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="49.1197403" cy="21" r="21"></circle>
+                        <ellipse id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="177.11974" cy="26.5" rx="17" ry="16.5"></ellipse>
+                        <path d="M75.1197403,123 L144.11974,123 C144.11974,123 135.872184,103 109.587617,103 C83.3030503,103 75.1197403,123 75.1197403,123 Z" id="Path" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="76.8149404 119 48.1197403 29.100263 52.9899534 26 94.1197403 112.878361"></polygon>
+                        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="119.11974 120.420266 172.591497 26 178.11974 27.9290438 137.147761 131"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

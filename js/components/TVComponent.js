@@ -3,7 +3,7 @@ import SingleMediaDetail from "./SingleMediaDetail.js";
 export default {
     name: "TheShowComponent",
 
-    props: ['currentuser'],
+    props: ['permissions'],
 
     template: `
     <section>
@@ -52,7 +52,7 @@ export default {
             allRetrievedVideos: [],
             singleDetail: false,
             detailComponent: SingleMediaDetail,
-            permissions: this.currentuser
+            access: this.permissions
         }
     },
 
@@ -83,7 +83,7 @@ export default {
 
             // WORKING!!!!!!!!!!
             // If kid, show
-            if (this.permissions == "0") {
+            if (this.access == "0") {
                 // console.log('Kid!');
                 if (localStorage.getItem("cachedTVKids")) {
                     this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedTVKids"));

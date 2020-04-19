@@ -25,7 +25,7 @@ export default {
 
             // send this user to its home page, and pass the user object to the hoome page
             this.$router.push({ name: "home", params: { currentuser: this.liveuser }, props: { currentuser: this.liveuser } })
-        }
+        }  
     }
 
 }

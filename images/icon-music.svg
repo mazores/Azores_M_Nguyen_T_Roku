@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 435 435" style="enable-background:new 0 0 435 435;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:url(#Rectangle_9_);}
+	.st2{fill:url(#Path_3_);}
+	.st3{fill:url(#Path_4_);}
+	.st4{fill:#FFFFFF;}
+	.st5{font-family:'Bangers-Regular';}
+	.st6{font-size:109.3673px;}
+	.st7{fill:none;stroke:#FCFCFC;stroke-width:20;}
+	.st8{fill:#F9F9FA;stroke:#F9F9F9;}
+	.st9{fill:#F9E487;}
+	.st10{fill:#95E5F0;}
+	.st11{fill:#F7768A;}
+	.st12{fill:#C68DDE;}
+	.st13{fill:#9371BF;}
+</style>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M328.3,449H100.6c-65,0-117.6-52.7-117.6-117.6V103.6c0-65,52.7-117.6,117.6-117.6h227.7
+			c65,0,117.6,52.7,117.6,117.6v227.7C445.9,396.3,393.3,449,328.3,449z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<desc>Created with Sketch.</desc>
+	<g id="Page-4" class="st0">
+		<g id="_x33_nd_x5F_parents" transform="translate(-503.000000, -1081.000000)">
+			<g id="music" transform="translate(503.000000, 1081.000000)">
+				<g id="music100" transform="translate(0.000000, -11.000000)">
+					
+						<linearGradient id="Rectangle_9_" gradientUnits="userSpaceOnUse" x1="-421.1074" y1="588.1893" x2="-420.1074" y2="588.1893" gradientTransform="matrix(457 0 0 -457 192432 269031)">
+						<stop  offset="0" style="stop-color:#F7768A"/>
+						<stop  offset="1" style="stop-color:#FFDDA9"/>
+					</linearGradient>
+					<rect id="Rectangle" x="-14.1" class="st1" width="457" height="457"/>
+					
+						<linearGradient id="Path_3_" gradientUnits="userSpaceOnUse" x1="-420.2341" y1="587.9836" x2="-419.2341" y2="587.9836" gradientTransform="matrix(231 0 0 -275 97286.0078 162015)">
+						<stop  offset="0" style="stop-color:#9371BF"/>
+						<stop  offset="0.14" style="stop-color:#9385C7"/>
+						<stop  offset="0.54" style="stop-color:#94B9DD"/>
+						<stop  offset="0.83" style="stop-color:#95D9EB"/>
+						<stop  offset="1" style="stop-color:#95E5F0"/>
+					</linearGradient>
+					<path id="Path" class="st2" d="M442.9,457l-74.4-0.3L260.1,457c0,0-51.1-29.5-48-114.5C215.3,253.9,284,182,372.7,182
+						c24.3,0,48.3,5.5,70.2,16.1"/>
+					
+						<linearGradient id="Path_4_" gradientUnits="userSpaceOnUse" x1="-417.886" y1="587.5955" x2="-418.886" y2="587.5955" gradientTransform="matrix(131 0 0 -157 54860 92331)">
+						<stop  offset="0" style="stop-color:#C68DDE"/>
+						<stop  offset="1" style="stop-color:#FFDDA9"/>
+					</linearGradient>
+					<path id="Path_1_" class="st3" d="M-14.1,0l42.2,0.1L89.6,0c0,0,29,16.8,27.2,65.3C115,115.9,76.1,157,25.7,157
+						c-13.8,0-27.4-3.1-39.8-9.2"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 96.9409 415.6961)" class="st4 st5 st6">MUSIC</text>
+<g id="Page-4_1_">
+	<g id="_x33_nd_x5F_parents_1_" transform="translate(-613.000000, -1111.000000)">
+		<g id="music_1_" transform="translate(503.000000, 1081.000000)">
+			<g id="music100_1_" transform="translate(0.000000, -11.000000)">
+				<g id="music_2_" transform="translate(110.000000, 41.000000)">
+					<path id="Rectangle_8_" class="st7" d="M172.3,141H271c27.7,0,50.1,22.4,50.1,50.1v50.7c0,27.7-22.4,50.1-50.1,50.1h-98.7
+						c-27.7,0-50.1-22.4-50.1-50.1v-50.7C122.2,163.4,144.6,141,172.3,141z"/>
+					<ellipse id="Oval" class="st8" cx="190.7" cy="205" rx="35.5" ry="35"/>
+					<circle id="Oval_1_" class="st8" cx="262.2" cy="190" r="15"/>
+					<polygon id="Path_2_" class="st8" points="157.2,147 161.6,72 169.8,72 177.2,147 					"/>
+					<circle id="Oval_2_" class="st8" cx="165.7" cy="67.5" r="17.5"/>
+					<path id="Rectangle_1_" class="st9" d="M165.1,10L165.1,10c2.3,0,4,1.8,4,4V40c0,2.2-1.8,4-4,4h-0.1c-2.2,0-4-1.8-4-4V14
+						C161.2,11.8,163,10,165.1,10z"/>
+					<path id="Rectangle_2_" class="st10" d="M188.7,68.5L188.7,68.5c0-2.3,1.8-4,4-4h27.1c2.2,0,4,1.8,4,4v0.1c0,2.2-1.8,4-4,4
+						h-27.1C190.5,72.5,188.7,70.7,188.7,68.5z"/>
+					<path id="Rectangle_3_" class="st11" d="M182,83.7l0.1-0.1c1.5-1.5,4-1.5,5.6,0l18.8,18.7c1.6,1.5,1.6,4.1,0,5.6c0,0,0,0,0,0
+						l-0.1,0.1c-1.5,1.5-4,1.5-5.6,0L182,89.3C180.4,87.8,180.4,85.3,182,83.7C182,83.7,182,83.7,182,83.7z"/>
+					<path id="Rectangle_4_" class="st12" d="M125,109.3l-0.1-0.1c-1.6-1.5-1.6-4.1,0-5.6c0,0,0,0,0,0l18.8-18.7
+						c1.5-1.5,4-1.5,5.6,0l0.1,0.1c1.6,1.5,1.6,4.1,0,5.6c0,0,0,0,0,0l-18.8,18.7C129,110.8,126.5,110.8,125,109.3z"/>
+					<path id="Rectangle_5_" class="st13" d="M184.6,51.3l-0.1-0.1c-1.6-1.5-1.6-4.1,0-5.6c0,0,0,0,0,0l18.8-18.7
+						c1.5-1.5,4-1.5,5.6,0L209,27c1.6,1.5,1.6,4.1,0,5.6c0,0,0,0,0,0l-18.8,18.7C188.6,52.8,186.1,52.8,184.6,51.3z"/>
+					<path id="Rectangle_6_" class="st10" d="M124.8,27l0.1-0.1c1.5-1.5,4-1.5,5.6,0l18.8,18.7c1.6,1.5,1.6,4.1,0,5.6c0,0,0,0,0,0
+						l-0.1,0.1c-1.5,1.5-4,1.5-5.6,0l-18.8-18.7C123.3,31,123.3,28.5,124.8,27C124.8,27,124.8,27,124.8,27z"/>
+					<path id="Rectangle_7_" class="st9" d="M107.7,68.5L107.7,68.5c0-2.3,1.8-4,4-4h27.1c2.2,0,4,1.8,4,4v0.1c0,2.2-1.8,4-4,4
+						h-27.1C109.5,72.5,107.7,70.7,107.7,68.5z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

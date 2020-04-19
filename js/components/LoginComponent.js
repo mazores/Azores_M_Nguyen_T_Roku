@@ -101,6 +101,10 @@ export default {
         </div>
      `,
 
+     beforeCreate: function() {
+        document.body.className = 'one';
+    },
+
     data() {
         return {
             input: {

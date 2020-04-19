@@ -7,11 +7,11 @@ import MusicComponent from "./MusicComponent.js";
 export default {
     name: "TheUserHomeComponent",
 
-    props: ['currentuser'],
+    props: ['permissions', 'activeMedia'],
 
     template: `
     <div class="container">
-        <component :is="this.activeComponent" :currentuser="permissions.admin"></component>
+        <component :is="this.activeComponent" :permissions="access.admin"></component>
 
         <!-- show media icons here -->
         <div class="row"> <!-- 2-up for nav and media info -->
@@ -32,8 +32,8 @@ export default {
 
     data: function() {
         return {
-            activeComponent: MovieComponent,
-            permissions: this.currentuser,
+            activeComponent: this.activeMedia,
+            access: this.permissions,
             mediaTypes: [
                 {
                     iconClass: "fas fa-film",

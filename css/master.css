@@ -49,7 +49,14 @@ html {
 body {
   font-family: "Muli", sans-serif;
   color: white;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  background-color: #C9D1E2; }
+
+body.one {
+  background-color: #C9D1E2; }
+
+body.two {
+  background: pink; }
 
 a {
   color: #00B7FF;
@@ -156,12 +163,11 @@ label {
   background-color: #C1A9E5 !important;
   border-color: #AE94CF !important; }
 
+.icon-home img {
+  width: 100%; }
+
 .container #allusers > div:first-of-type {
   padding-top: 100px !important; }
-
-#allusers {
-  background: url("./images/background_home.svg");
-  background-color: #C9D1E2; }
 
 .user-message {
   margin: 0.25em 0 1em; }
@@ -307,11 +313,8 @@ footer {
       margin-right: 0.4em;
       color: rgba(255, 255, 255, 0.3); }
 
-#login {
-  background: url("./images/background_home.svg");
-  background-color: #C9D1E2; }
-  #login h1, #login p {
-    color: white; }
+#login h1, #login p {
+  color: white; }
 
 .roku-jumbotron {
   color: #333;
