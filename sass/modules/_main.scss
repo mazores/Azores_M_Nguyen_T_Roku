@@ -8,8 +8,19 @@ body {
 	color: white;
 	margin-bottom: 100px;
 	// background: url(../images/gunmetal.jpg) repeat;
-	
+    background-color: #C9D1E2;
+
 }
+
+body.one {
+	// background: url(../images/background.svg);
+	// background-size: contain;
+    background-color: #C9D1E2;
+}
+body.two {
+    background: pink;
+}
+
 
 a {
 	color: #00B7FF;

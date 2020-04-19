@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 435 435" style="enable-background:new 0 0 435 435;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:url(#Rectangle_8_);}
+	.st2{fill:url(#Path_4_);}
+	.st3{fill:#FFFFFF;}
+	.st4{font-family:'Bangers-Regular';}
+	.st5{font-size:109.3673px;}
+	.st6{fill:#F9E487;}
+	.st7{fill:#F7768A;}
+	.st8{fill:#95E5F0;}
+	.st9{fill:#FFDDA9;}
+	.st10{fill:#C68DDE;}
+	.st11{fill:#9371BF;}
+	.st12{fill:none;stroke:#FFFFFF;stroke-width:21.6049;}
+</style>
+<desc>Created with Sketch.</desc>
+<g>
+	<defs>
+		<path id="SVGID_1_" d="M335.2,449H107.4c-65,0-117.6-52.7-117.6-117.6V103.6c0-65,52.7-117.6,117.6-117.6h227.7
+			c65,0,117.6,52.7,117.6,117.6v227.7C452.8,396.3,400.1,449,335.2,449z"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="Page-4" class="st0">
+		<g id="_x33_nd_x5F_parents" transform="translate(-28.000000, -1081.000000)">
+			<g id="shows" transform="translate(28.000000, 1081.000000)">
+				<g id="series100" transform="translate(-10.000000, -11.000000)">
+					
+						<linearGradient id="Rectangle_8_" gradientUnits="userSpaceOnUse" x1="-411.0672" y1="588.1893" x2="-410.0672" y2="588.1893" gradientTransform="matrix(457 0 0 -457 187862 269031)">
+						<stop  offset="0" style="stop-color:#C68DDE"/>
+						<stop  offset="1" style="stop-color:#FFDDA9"/>
+					</linearGradient>
+					<rect id="Rectangle" x="4.3" class="st1" width="457" height="457"/>
+					
+						<linearGradient id="Path_4_" gradientUnits="userSpaceOnUse" x1="-411.0672" y1="588.0434" x2="-410.0672" y2="588.0434" gradientTransform="matrix(457 0 0 -311 187862 183183)">
+						<stop  offset="0" style="stop-color:#9371BF"/>
+						<stop  offset="0.14" style="stop-color:#9385C7"/>
+						<stop  offset="0.54" style="stop-color:#94B9DD"/>
+						<stop  offset="0.83" style="stop-color:#95D9EB"/>
+						<stop  offset="1" style="stop-color:#95E5F0"/>
+					</linearGradient>
+					<path id="Path" class="st2" d="M4.3,393.3c0,0,55-102.1,130.6-101.1S384.7,211.7,402.6,146c0,0,58.7,92.2,58.7,156.4V457H4.3
+						V393.3z"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+<text transform="matrix(1 0 0 1 34.3369 412.7229)" class="st3 st4 st5">TV SHOWS</text>
+<g id="Page-4_1_">
+	<g id="_x33_nd_x5F_parents_1_" transform="translate(-121.000000, -1101.000000)">
+		<g id="shows_1_" transform="translate(28.000000, 1081.000000)">
+			<g id="series100_1_" transform="translate(-10.000000, -11.000000)">
+				<g id="tv" transform="translate(116.000000, 31.000000)">
+					<rect id="Rectangle_7_" x="149.5" y="142.6" class="st6" width="30.2" height="129.6"/>
+					<rect id="Rectangle_1_" x="179.8" y="142.6" class="st7" width="30.2" height="129.6"/>
+					<rect id="Rectangle_2_" x="208.3" y="142.6" class="st8" width="30.2" height="129.6"/>
+					<rect id="Rectangle_3_" x="238.5" y="142.6" class="st9" width="30.2" height="129.6"/>
+					<rect id="Rectangle_4_" x="266.2" y="142.6" class="st10" width="30.2" height="129.6"/>
+					<rect id="Rectangle_5_" x="120.1" y="142.6" class="st11" width="30.2" height="129.6"/>
+					<path id="Rectangle_6_" class="st12" d="M161.8,135.7h93c28.3,0,51.2,22.9,51.2,51.2v42c0,28.3-22.9,51.2-51.2,51.2h-93
+						c-28.3,0-51.2-22.9-51.2-51.2v-42C110.6,158.6,133.5,135.7,161.8,135.7z"/>
+					<circle id="Oval" class="st3" cx="153" cy="40.7" r="18.1"/>
+					<ellipse id="Oval_1_" class="st3" cx="263.6" cy="45.4" rx="14.7" ry="14.3"/>
+					<path id="Path_3_" class="st3" d="M175.5,128.8h59.6c0,0-7.1-17.3-29.8-17.3S175.5,128.8,175.5,128.8z"/>
+					<polygon id="Path_1_" class="st3" points="176.9,125.4 152.1,47.7 156.3,45 191.9,120.1 					"/>
+					<polygon id="Path_2_" class="st3" points="213.5,126.6 259.7,45 264.5,46.6 229.1,135.7 					"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
