@@ -8,19 +8,22 @@ export default {
         <div class="col-12 col-sm-9 media-info">
             <ul class="media-genres">
                 <li>
-                    <a href="action" @click.prevent="filterMedia('action')">Action</a>
+                    <a href="1950" @click.prevent="filterMedia('1950')">1950</a>
                 </li>
                 <li>
-                    <a href="comedy" @click.prevent="filterMedia('comedy')">Comedy</a>
+                    <a href="1960" @click.prevent="filterMedia('1960')">1960</a>
                 </li>
                 <li>
-                    <a href="family" @click.prevent="filterMedia('family')">Family</a>
+                    <a href="1970" @click.prevent="filterMedia('1970')">1970</a>
                 </li>
                 <li>
-                    <a href="fantasy" @click.prevent="filterMedia('fantasy')">Fantasy</a>
+                    <a href="1980" @click.prevent="filterMedia('1980')">1980</a>
                 </li>
                 <li>
-                    <a href="horror" @click.prevent="retrieveVideoContent">All</a>
+                    <a href="1990" @click.prevent="filterMedia('1990')">1990</a>
+                </li>
+                <li>
+                    <a href="all" @click.prevent="retrieveVideoContent">All</a>
                 </li>
             </ul>
         </div>
@@ -55,18 +58,17 @@ export default {
     },
 
     methods: {
-        filterMedia(filter) {
+        filterMedia(decade) {
             // debugger;
 
-            let url = `./admin/index.php?media=tv&filter=${filter}`;
+            let url = `./admin/index.php?media=music&decade=${decade}`;
 
             fetch(url)
                 .then(res => res.json())
                 .then(data => {
-                    this.allRetrievedMedia = data;
+                    this.allRetrievedVideos = data;
                     this.currentMediaDetails = data[0];
                 })
-
         },
 
         retrieveVideoContent() {

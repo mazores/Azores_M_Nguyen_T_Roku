@@ -28,7 +28,23 @@ function getSingleMovie($tbl, $col, $id)
     } else {
         return 'There was a problem accessing this info';
     }
+}
 
+function getMoviesByFilter($tbl, $decade)
+{
+    $pdo = Database::getInstance()->getConnection();
+    $queryAll = "SELECT * FROM $tbl WHERE decade LIKE '%$decade%'";
+
+    $results = $pdo->query($queryAll);
+
+    // echo $filterQuery;
+    // exit;
+
+    if ($results) {
+        return $results;
+    } else {
+        return 'There was a problem accessing this info';
+    }
 }
 
 // function getMoviesByFilter($args)
@@ -51,20 +67,3 @@ function getSingleMovie($tbl, $col, $id)
 //         return 'There was a problem accessing this info';
 //     }
 // }
-
-function getMoviesByFilter($tbl, $decade)
-{
-    $pdo = Database::getInstance()->getConnection();
-    $queryAll = "SELECT * FROM $tbl WHERE decade LIKE '%$decade%'";
-
-    $results = $pdo->query($queryAll);
-
-    // echo $filterQuery;
-    // exit;
-
-    if ($results) {
-        return $results;
-    } else {
-        return 'There was a problem accessing this info';
-    }
-}
