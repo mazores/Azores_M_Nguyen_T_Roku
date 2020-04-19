@@ -9,30 +9,31 @@ export default {
     props: ['currentuser'],
 
     template: `
-    <div class="container-fluid d-flex" id="login" style="height: 100vh">
+    <div class="container-fluid" id="login" style="height: 100vh">
+        <!-- <div class="row d-flex align-content-md-end align-items-end my-md-4 mt-5 justify-content-center pb-5 pb-xl-1 pt-xl-5 pb-xl-3"> -->
 
-        <div class="row align-items-center justify-content-center my-auto py-auto">
-            <div class="col-10 center">
+        <div class="row d-flex align-content-end align-items-end justify-content-center mt-5 pt-5">
+            <div class="col-10 mt-5 pt-5 center">
                 <h1 class="center">Where to start?</h1>
             </div>
 
-            <!-- show media icons here -->
-            
-            <div class="icon-home col-4 px-1 px-md-3 px-lg-5 mt-lg-5" v-for="media in mediaTypes" :data-type="media.description" :activeComponent="media" @click="selectComponent(media.component); navToMediaHome()">
-                <img :src="'./images/icon-'+ media.icon">
+            <div class="col-10 col-md-6 col-xl-4 mb-3 mb-md-5 center">
+                    <p>Greatest collection of entertainment from 1950, 1960, 1970, 1980, and 1990. The first and only free streaming app for everyone.</p>
             </div>
 
-            <nav class="col-12 col-sm-3">
-                <ul class="media-type">
-                    <li v-for="media in mediaTypes" :data-type="media.description" @click="switchMedia(media.component); showAllDetails()">
-                        
-                        <span class="d-none d-md-block">{{ media.description }}</span>
-                    </li>
-                </ul>
-            </nav>
+            <div class="w-100"></div>
+
+            <!-- show media icons here -->
+            <div class="icon-home col-4 px-1 px-md-3 px-lg-5 mt-lg-5 mb-5 pb-5 align-self-end" v-for="media in mediaTypes" :data-type="media.description" :activeComponent="media" @click="selectComponent(media.component); navToMediaHome()">
+                <img :src="'./images/icon-'+ media.icon">
+            </div>
         </div>
     </div>
     `,
+
+    beforeCreate: function() {
+        document.body.className = 'two';
+    },
 
     data: function() {
         return {
@@ -42,7 +43,6 @@ export default {
                 {
                     description: "Movies",
                     icon: "movie.svg",
-                    background: "/images/home-background-movie.svg",
                     component: MovieComponent
                 },
                 {
@@ -66,7 +66,7 @@ export default {
         },
 
         navToMediaHome() {
-            debugger;
+            // debugger;
 
             // send this user to its home page, and pass the user object to the hoome page
             this.$router.push({ name: "media", params: { permissions: this.currentuser, activeMedia:this.activeComponent }, props: { permissions: this.currentuser, activeMedia: this.activeComponent } })

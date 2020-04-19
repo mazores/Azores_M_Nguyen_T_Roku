@@ -7,7 +7,7 @@ export default {
 
     template: `
     <section>
-        <div class="col-12 col-sm-9 media-info">
+        <div class="media-genres-container col-12 d-flex justify-content-end no-gutters mt-2 media-info my-md-4">
             <ul class="media-genres">
                 <li>
                     <a href="1950" @click.prevent="filterMedia('1950')">1950</a>
@@ -31,15 +31,15 @@ export default {
         </div>
 
         <div v-show="singleDetail" class="back-button">
-            <h6 @click="toSingleDetail()">Back</h6>
+            <h3 @click="toSingleDetail()">Back</h3>
         </div>
 
         <component v-show="singleDetail" :is="detailComponent" :image="currentMediaDetails.tv_cover" :title="currentMediaDetails.tv_title" :storyline="currentMediaDetails.tv_storyline" :year="currentMediaDetails.tv_year" :video="currentMediaDetails.tv_trailer"></component>
 
-        <div class="row retrievedvideos" v-bind:class="{hide:singleDetail}">
-            <div class="col-12 col-sm-9">
-                <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.tv_cover" alt="media thumbnail" @click="loadNewShow(item); toSingleDetail()" class="img-thumbnail rounded float-left media-thumb">
+        <div class="row d-flex retrievedvideos justify-content-center" v-bind:class="{hide:singleDetail}">
+            <div class="col-12">
+                <div>
+                    <img class="no-gutter cols-3" v-for="item in allRetrievedVideos" :src="'images/' + item.tv_cover" alt="media thumbnail" @click="loadNewShow(item); toSingleDetail()" class="img-thumbnail rounded float-left media-thumb">
                 </div>
             </div>
         </div>

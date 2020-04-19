@@ -1,6 +1,80 @@
+.media-genres-container {
+    padding: 0!important;
+    text-align: right;
+    
+    ul.media-genres {
+        list-style-type: none;
+        background: transparent;
+        margin: 0;
+
+        li { 
+            display: inline-block;
+            background-color: rgba(255,255,255,0.6);
+            border-radius: 8px;
+            border: 1px solid white;
+            padding: 0 10px 5px 10px;
+            margin-left: 5px;
+
+            a {
+                font-size: 8px;
+                color: white;
+                text-decoration: none;
+                line-height: 0!important;
+            }
+            
+            a:hover { color: $purple; }
+        }
+    }
+}
+
+.media-details-cont {
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 0 50px 0 0;
+
+    h1 {
+        color: $purple!important;
+    }
+
+    p {
+        color: black!important;
+    }
+}
+
+.media-info {
+    .back-button {
+        h3 {
+            font-family: $Bangers;
+            font-size: 20px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .media-genres-container {
+        ul.media-genres {
+
+            li {
+                padding: 15px 20px 10px 20px;
+                margin-left: 15px;
+                border-radius: 15px;
+
+                a {
+                    font-size: 22px;
+                }
+
+            }
+        }
+    }
+
+}
+
+
 .fs-video { width: 100% }
 
-.media-container { background: darken($dark-bg, 15%)}
 .media-container:first-of-type { padding-bottom: 1em; }
 .media-container:last-of-type { padding-left: 0; padding-right: 0; }
 
@@ -16,7 +90,6 @@
 .media-year, .media-time { font-size: 1em; }
 .media-year { display: block; float: right; }
 
-.side-nav { background: darken($dark-bg, 9%) }
 
 // left hand pad list -> audio, film television
 .media-type { 
@@ -36,66 +109,26 @@
         }
     }
 
-    li:hover span:first-of-type { color: $roku-purple }
+    li:hover span:first-of-type { color: $purple }
 }
 
 // genre filter links
 
-.media-genres {
-    list-style-type: none;
-    background: darken($dark-bg, 10%);
-    margin: 0;
-    padding: 1em 1em 1em 1.5em;
-
-    li { 
-        display: inline-block;
-
-        a {
-            font-size: 1rem;
-            color: white;
-            text-decoration: none;
-        }
-        
-        a:hover { color: $roku-purple; }
-    }
-
-    li::after {
-        content: "|";
-        padding: 0 8px 0 13px;
-        color: rgba(255,255,255,0.5);
-    }
-
-    li:last-of-type::after {
-        content: none;
-    }
-}
 
 // media thumbnails
-.media-info {
-    padding-left: 0;
-    padding-right: 0;
+// FILTERING
 
-    > div { padding: 0 10px; }
-}
 
 .media-thumb {
     height: 140px;
     margin: 0.7em;
 }
 
-.audio-thumb { height: 150px; }
-
-.audio-wrapper {
-    background: $dark-bg;
-
-    img { max-width: 85%; display: block; margin: 0 auto; padding: 4% }
-
+.img-thumbnail {
+    background-color: transparent!important;
+    border: 0 none!important;
 }
 
-audio {
-    width: 70%;
-    margin: 0 13%;
-    position: absolute;
-    bottom: 12%;
-    opacity: 0.8;
+.image-details {
+    width: 100%!important;
 }

@@ -5,8 +5,8 @@ export default {
         <div class="container-fluid d-flex" id="login" style="height: 100vh">
             <div class="row align-items-center justify-content-center my-auto py-auto">
             <!-- <div class="jumbotron roku-jumbotron"> -->
-                <div class="col-10 center">
-                    <h1 class="display-4 center">Travel back in time with us</h1>
+                <div class="col-10 mt-md-5 center">
+                    <h1 class="center">Travel back in time with us</h1>
                 </div>
 
                 <div class="col-10 col-md-6 col-xl-4 center">
@@ -40,12 +40,12 @@ export default {
                                     <div class="form-row align-items-center px-lg-5 mb-lg-4">
                                         <div class="col-md-12 mb-3 my-1">
                                             <label for="inlineFormInputName">Username</label>
-                                            <input v-model="input.username" type="text" class="form-control" id="inlineFormInputName" placeholder="username" required>
+                                            <input v-model="input.username" type="text" class="form-control" id="inlineFormNewName" placeholder="username" required>
                                         </div>
 
                                         <div class="col-md-12 mb-3 my-1 px-lg-5 mb-lg-4">
                                             <label for="inlineFormPassword">Password</label>
-                                            <input v-model="input.password" type="password" class="form-control" id="inlineFormPassword" placeholder="password" required>
+                                            <input v-model="input.password" type="password" class="form-control" id="inlineNew" placeholder="password" required>
                                         </div>
 
                                         <div class="col-auto my-1 px-lg-5">

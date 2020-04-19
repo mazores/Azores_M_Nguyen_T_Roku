@@ -7,7 +7,7 @@
         // echo $tbl;
     }
 
-    if ((isset($_GET['decade'])) == '1950') { 
+    if (isset($_GET['decade'])) { 
         $decade = trim($_GET["decade"]);
 
         $results = getMoviesByFilter($tbl, $decade);
@@ -15,7 +15,7 @@
 
         // $tbl = "tbl_" . trim($_GET["type"]);
         // echo $tbl;
-    }  
+    }   
 
     if ((isset($_GET['type'])) == 'Kid') { 
         $type = trim($_GET["type"]);
@@ -26,7 +26,6 @@
         // $tbl = "tbl_" . trim($_GET["type"]);
         // echo $tbl;
     }  
-    
     
     else {
         $results = getAll($tbl);

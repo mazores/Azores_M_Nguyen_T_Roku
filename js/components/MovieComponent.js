@@ -3,11 +3,11 @@ import SingleMediaDetail from "./SingleMediaDetail.js";
 export default {
     name: "TheMovieComponent",
 
-    props: ['currentuser'],
+    props: ['permissions'],
 
     template: `
     <section>
-        <div class="col-12 col-sm-9 media-info">
+        <div class="media-genres-container col-12 d-flex justify-content-end no-gutters mt-2 media-info my-md-4">
             <ul class="media-genres">
                 <li>
                     <a href="1950" @click.prevent="filterMedia('1950')">1950</a>
@@ -31,15 +31,15 @@ export default {
         </div>
 
         <div v-show="singleDetail" class="back-button">
-            <h6 @click="toSingleDetail()">Back</h6>
+            <h3 @click="toSingleDetail()">Back</h3>
         </div>
 
         <component v-show="singleDetail" :is="detailComponent" :image="currentMediaDetails.movies_cover" :title="currentMediaDetails.movies_title" :storyline="currentMediaDetails.movies_storyline" :year="currentMediaDetails.movies_year" :video="currentMediaDetails.movies_trailer"></component>
 
-        <div class="row retrievedvideos" v-bind:class="{hide:singleDetail}">
-            <div class="col-12 col-sm-9">
-                <div class="thumb-wrapper clearfix">
-                    <img v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media thumbnail" @click="loadNewMovie(item); toSingleDetail()" class="img-thumbnail rounded float-left media-thumb">
+        <div class="row d-flex retrievedvideos justify-content-center" v-bind:class="{hide:singleDetail}">
+            <div class="col-12">
+                <div class="thumb-wrapper">
+                    <img class="no-gutter cols-3 cols-lg-4" v-for="item in allRetrievedVideos" :src="'images/' + item.movies_cover" alt="media thumbnail" @click="loadNewMovie(item); toSingleDetail()" class="img-thumbnail rounded float-left media-thumb">
                 </div>
             </div>
         </div>
@@ -52,7 +52,7 @@ export default {
             allRetrievedVideos: [],
             singleDetail: false,
             detailComponent: SingleMediaDetail,
-            permissions: this.currentuser
+            access: this.permissions
         }
     },
 
@@ -82,7 +82,7 @@ export default {
             
             // If kid, show
     
-            if (this.permissions == "0") {
+            if (this.access == "0") {
                 // console.log('Kid!');
                 if (localStorage.getItem("cachedMovieKids")) {
                     this.allRetrievedVideos = JSON.parse(localStorage.getItem("cachedMovieKids"));

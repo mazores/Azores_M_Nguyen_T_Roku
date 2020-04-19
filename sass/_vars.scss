@@ -39,19 +39,6 @@ $gray: #706F72;
 $white-opacity: 0.8;
 $gray-opacity: 0.54;
 
-
-// NOT MINE:
-$dark-bg: rgb(26, 24, 24);
-$roku-purple: #6C3C97;
-
-@mixin vertical-align($position: relative) {
-    position: $position;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
 @media screen and (min-width: 768px) {
     h1 {
         font-size: 60px;
