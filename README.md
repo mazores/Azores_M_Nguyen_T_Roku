@@ -2,7 +2,7 @@
 ### Take a trip back to yesteryear with your old audio, tv and film faves!
 The Roku Flashback App is a streaming service under Roku. Through this app, you can stream movies, television, or music from different eras.
 
-# Setup
+## Setup
 ### PHP
 1. Clone repo to your localhost location (htdocs, www directory or wherever your local server expects to find your files) with <code> git clone </code>.
 2. Start MAMP/WAMP
@@ -15,7 +15,7 @@ The Roku Flashback App is a streaming service under Roku. Through this app, you 
 3. <code> docker-compose up </code>
 4. When done,<code> docker-compose down </code>
 
-# Tools
+## Tools
 * HTML5
 * CSS3 & SASS
 * Vue (bare bones - no webpack!)
@@ -26,6 +26,6 @@ The Roku Flashback App is a streaming service under Roku. Through this app, you 
 * Gulp 
 ⋅⋅* (Check <code>gulpfile.js</code> for reference. NPM install should get you up and running with your dev tools.)
 
-# Team
+## Team
 * Mikka Azores - Developer
 * Megan Nguyen - Designer
