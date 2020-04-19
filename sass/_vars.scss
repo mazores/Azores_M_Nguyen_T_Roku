@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&family=Muli:wght@300;400&display=swap');
+
+$Bangers: 'Bangers', cursive;
+$Muli: 'Muli', sans-serif;
+
+h1 {
+    font-family: $Bangers;
+    font-size: 25px;
+}
+
+h2 {
+    font-family: $Bangers;
+    font-size: 20px;
+}
+
+p {
+    font-family: $Muli;
+    font-size: 12px;
+}
+
+$lighterpurple: #C1A9E5;
+$darkerpurple: #AE94CF;
+$gray: #706F72;
+
+$white-opacity: 0.8;
+$gray-opacity: 0.54;
+
+
+// NOT MINE:
 $dark-bg: rgb(26, 24, 24);
 $roku-purple: #6C3C97;
 
@@ -8,4 +37,12 @@ $roku-purple: #6C3C97;
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-  
+
+
+// h1 {
+//     font-size: 60px;
+// }
+
+// h2 {
+//     font-size: 40px;
+// }
