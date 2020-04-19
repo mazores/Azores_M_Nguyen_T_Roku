@@ -21,6 +21,22 @@ p.detail {
 p.footer {
   font-size: 8px; }
 
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 60px; }
+
+  h2 {
+    font-size: 40px; }
+
+  p {
+    font-size: 22px;
+    font-weight: 300; }
+
+  p.detail {
+    font-size: 18px; }
+
+  p.footer {
+    font-size: 14px; } }
 * {
   border: 0;
   padding: 0;
@@ -133,6 +149,12 @@ label {
 .btn-primary {
   background-color: #C1A9E5 !important;
   border: none !important; }
+
+.btn-outline-light:not(:disabled):not(.disabled).active, .btn-outline-light:not(:disabled):not(.disabled):active, .show > .btn-outline-light.dropdown-toggle,
+.btn-outline-light:hover {
+  color: white !important;
+  background-color: #C1A9E5 !important;
+  border-color: #AE94CF !important; }
 
 .container #allusers > div:first-of-type {
   padding-top: 100px !important; }

@@ -2,7 +2,7 @@ export default {
     props: ['liveuser'],
 
     template: `
-    <div class="col-6 col-sm-6 col-md-4px">
+    <div class="col-6 col-md-4 px-md-4">
         <div class="card rounded" @click="navToUserHome()">
             <div class="card-body text-center">
                 <img :src="'images/user/' + liveuser.avatar + '.jpg'" class="rounded-circle img-fluid">

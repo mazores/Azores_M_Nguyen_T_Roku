@@ -2,7 +2,15 @@
     border-radius: 15px!important;
     padding: 10px 20px!important;
 }
+
 .btn-primary {
     background-color: $lighterpurple!important;
     border: none!important;
+}
+
+.btn-outline-light:not(:disabled):not(.disabled).active, .btn-outline-light:not(:disabled):not(.disabled):active, .show>.btn-outline-light.dropdown-toggle,
+.btn-outline-light:hover {
+    color: white!important;
+    background-color: $lighterpurple!important;
+    border-color: $darkerpurple!important;
 }
