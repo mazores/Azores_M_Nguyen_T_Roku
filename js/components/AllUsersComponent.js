@@ -2,13 +2,12 @@ import UserComponent from './UserComponent.js';
 
 export default {
 	template: `
-	<div class="container">
-		<div class="row">
+	<div class="container-fluid d-flex flex-column" id="allusers" style="height: 100vh">
+		<div class="row d-flex align-items-center justify-content-center my-auto py-auto">
 			<div class="col-sm-12">
 				<h1 class="user-message">{{ message }}</h1>
 			</div>
-		</div>
-		<div class="row">
+
 			<user v-for="(user, index) in userList" :liveuser="user" :key="index"></user>
 		</div>
 	</div>
@@ -20,7 +19,7 @@ export default {
 
 	data() {
 		return {
-			message: `Who's Using Roku?`,
+			message: `Who's Time-Travelling?`,
 
 			userList: []
 		}

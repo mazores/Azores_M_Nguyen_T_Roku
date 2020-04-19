@@ -6,18 +6,32 @@ $Muli: 'Muli', sans-serif;
 h1 {
     font-family: $Bangers;
     font-size: 25px;
+    letter-spacing: 1px;
 }
 
 h2 {
     font-family: $Bangers;
     font-size: 20px;
+    letter-spacing: 1px;
 }
 
 p {
     font-family: $Muli;
     font-size: 12px;
+    font-weight: 300;
+    letter-spacing: 1px;
 }
 
+// Movie Detail & Comments
+p.detail {
+    font-size: 10px;
+}
+
+p.footer {
+    font-size: 8px;
+}
+
+$purple: #9863DB;
 $lighterpurple: #C1A9E5;
 $darkerpurple: #AE94CF;
 $gray: #706F72;
@@ -45,4 +59,18 @@ $roku-purple: #6C3C97;
 
 // h2 {
 //     font-size: 40px;
+// }
+
+// p {
+//     font-size: 22px;
+//     font-weight: 300;
+// }
+
+// // Movie Detail & Comments
+// p.detail {
+//     font-size: 18px;
+// }
+
+// p.footer {
+//     font-size: 14px;
 // }
