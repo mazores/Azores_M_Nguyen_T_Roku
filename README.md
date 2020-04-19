@@ -26,6 +26,11 @@ The Roku Flashback App is a streaming service under Roku. Through this app, you 
 * Gulp 
 ⋅⋅* (Check <code>gulpfile.js</code> for reference. NPM install should get you up and running with your dev tools.)
 
+## Future
+* Explore more functionality - saving, rating, comments, social media sharing, etc.
+* Add in animations and transitions for a more interactive feel.
+* Ability to search media by name, ability to filter through year, genre, and more.
+
 ## Team
 * Mikka Azores - Developer
 * Megan Nguyen - Designer
