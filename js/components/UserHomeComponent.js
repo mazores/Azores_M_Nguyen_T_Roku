@@ -11,7 +11,7 @@ export default {
 
     template: `
     <div class="container">
-        <component :is="this.activeComponent"></component>
+        <component :is="this.activeComponent" :currentuser="permissions.admin"></component>
 
         <!-- show media icons here -->
         <div class="row"> <!-- 2-up for nav and media info -->
@@ -33,6 +33,7 @@ export default {
     data: function() {
         return {
             activeComponent: MovieComponent,
+            permissions: this.currentuser,
             mediaTypes: [
                 {
                     iconClass: "fas fa-film",

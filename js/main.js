@@ -41,6 +41,18 @@ import UserHomeComponent from './components/UserHomeComponent.js';
         if (localStorage.getItem("cachedVideo")) {
           localStorage.removeItem("cachedVideo");
         }
+
+        if (localStorage.getItem("cachedTVKids")) {
+          localStorage.removeItem("cachedTVKids");
+        }
+
+        if (localStorage.getItem("cachedMovieKids")) {
+          localStorage.removeItem("cachedMovieKids");
+        }
+
+        if (localStorage.getItem("cachedMusic")) {
+          localStorage.removeItem("cachedMusic");
+        }
       }
     },
 
