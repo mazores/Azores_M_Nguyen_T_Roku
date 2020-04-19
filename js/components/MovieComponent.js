@@ -55,19 +55,19 @@ export default {
     },
 
     methods: {
-        filterMedia(filter) {
-            // debugger;
+        // filterMedia(filter) {
+        //     // debugger;
 
-            let url = `./admin/index.php?media=movies&filter=${filter}`;
+        //     let url = `./admin/index.php?media=movies&filter=${filter}`;
 
-            fetch(url)
-                .then(res => res.json())
-                .then(data => {
-                    this.allRetrievedMedia = data;
-                    this.currentMediaDetails = data[0];
-                })
+        //     fetch(url)
+        //         .then(res => res.json())
+        //         .then(data => {
+        //             this.allRetrievedMedia = data;
+        //             this.currentMediaDetails = data[0];
+        //         })
 
-        },
+        // },
 
         retrieveVideoContent() {
             // fetch all the video content here (don't care about filtering, genre etc at this point)
