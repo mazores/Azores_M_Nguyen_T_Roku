@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.3
 -- https://www.phpmyadmin.net/
 --
--- Host: mysql
--- Generation Time: Mar 10, 2020 at 02:00 PM
--- Server version: 10.3.22-MariaDB-1:10.3.22+maria~bionic
--- PHP Version: 7.4.1
+-- Host: localhost:3306
+-- Generation Time: Apr 20, 2020 at 02:34 AM
+-- Server version: 5.7.26
+-- PHP Version: 7.4.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -48,72 +46,6 @@ INSERT INTO `tbl_arating` (`arating_id`, `arating_name`, `arating_desc`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_cast`
---
-
-CREATE TABLE `tbl_cast` (
-  `cast_id` mediumint(8) UNSIGNED NOT NULL,
-  `cast_name` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_cast`
---
-
-INSERT INTO `tbl_cast` (`cast_id`, `cast_name`) VALUES
-(36, 'Amy Adams'),
-(26, 'Andrew Garfield'),
-(8, 'Aneurin Barnard'),
-(42, 'Anna Kendrick'),
-(14, 'Boyd Holbrook'),
-(5, 'Bradley Cooper'),
-(1, 'Chris Pratt'),
-(19, 'Colm Hill'),
-(13, 'Dafne Keen'),
-(7, 'Damien Bonnard'),
-(22, 'Dan Stevens'),
-(30, 'Darcy Bryce'),
-(3, 'Dave Bautista'),
-(33, 'Ed Skrein'),
-(21, 'Emma Watson'),
-(6, 'Fionn Whitehead'),
-(38, 'Forest Whitaker'),
-(46, 'Harrison Ford'),
-(11, 'Hugh Jackman'),
-(28, 'Jacob Warner'),
-(10, 'James Bloor'),
-(37, 'Jeremy Renner'),
-(45, 'Joseph Gordon-Levitt'),
-(24, 'Josh Gad'),
-(32, 'Karan Soni'),
-(20, 'Kathryn Kirkpatrick'),
-(25, 'Kevin Kline'),
-(9, 'Lee Armstrong'),
-(43, 'Leonardo DiCaprio'),
-(23, 'Luke Evans'),
-(40, 'Mark OBrien'),
-(34, 'Michael Benyaer'),
-(18, 'Michael Mitton'),
-(39, 'Michael Stuhlbarg'),
-(47, 'Miles Teller'),
-(29, 'Milo Gibson'),
-(12, 'Patrick Stewart'),
-(27, 'Richard Pyros'),
-(31, 'Ryan Reynolds'),
-(52, 'Sandra Bullock'),
-(44, 'Saoirse Ronan'),
-(17, 'Sheena Kamal'),
-(35, 'Stefan Kapicic'),
-(15, 'Stephen Merchant'),
-(53, 'Suraj Sharma'),
-(16, 'Tilda Swinton'),
-(41, 'Tom Costello'),
-(4, 'Vin Diesel'),
-(2, 'Zoe Saldana');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_comments`
 --
 
@@ -121,257 +53,8 @@ CREATE TABLE `tbl_comments` (
   `comments_id` mediumint(8) UNSIGNED NOT NULL,
   `comments_auth` varchar(125) NOT NULL,
   `comments_copy` text NOT NULL,
-  `comments_date` timestamp NOT NULL DEFAULT current_timestamp()
+  `comments_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_country`
---
-
-CREATE TABLE `tbl_country` (
-  `country_id` smallint(3) NOT NULL,
-  `country_name` varchar(100) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
-
---
--- Dumping data for table `tbl_country`
---
-
-INSERT INTO `tbl_country` (`country_id`, `country_name`) VALUES
-(1, 'Albania'),
-(2, 'Algeria'),
-(3, 'Andorra'),
-(4, 'Angola'),
-(5, 'Anguilla'),
-(6, 'Antarctica'),
-(7, 'Antigua'),
-(8, 'Antilles'),
-(9, 'Argentina'),
-(10, 'Armenia'),
-(11, 'Aruba'),
-(12, 'Australia'),
-(13, 'Austria'),
-(14, 'Azerbaijan'),
-(15, 'Bahamas'),
-(16, 'Bangladesh'),
-(17, 'Barbados'),
-(18, 'Belarus'),
-(19, 'Belgium'),
-(20, 'Belize'),
-(21, 'Benin'),
-(22, 'Bermuda'),
-(23, 'Bhutan'),
-(24, 'Bolivia'),
-(25, 'Bosnia'),
-(26, 'Botswana'),
-(27, 'Brazil'),
-(28, 'Brunei'),
-(29, 'Bulgaria'),
-(30, 'Burkina Faso'),
-(31, 'Burundi'),
-(32, 'Cambodia'),
-(33, 'Cameroon'),
-(34, 'Canada'),
-(35, 'Cape Verde'),
-(36, 'Cayman Islands'),
-(37, 'Central Africa'),
-(38, 'Chad'),
-(39, 'Chile'),
-(40, 'China'),
-(41, 'Colombia'),
-(42, 'Comoros'),
-(43, 'Congo'),
-(44, 'Cook Islands'),
-(45, 'Costa Rica'),
-(46, 'Cote D\'Ivoire'),
-(47, 'Croatia'),
-(48, 'Cuba'),
-(49, 'Cyprus'),
-(50, 'Czech Republic'),
-(51, 'Denmark'),
-(52, 'Djibouti'),
-(53, 'Dominica'),
-(54, 'Dominican Rep.'),
-(55, 'Ecuador'),
-(56, 'Egypt'),
-(57, 'El Salvador'),
-(58, 'Eritrea'),
-(59, 'Estonia'),
-(60, 'Ethiopia'),
-(61, 'Fiji'),
-(62, 'Finland'),
-(63, 'Falkland Islands'),
-(64, 'France'),
-(65, 'Gabon'),
-(66, 'Gambia'),
-(67, 'Georgia'),
-(68, 'Germany'),
-(69, 'Ghana'),
-(70, 'Gibraltar'),
-(71, 'Greece'),
-(72, 'Greenland'),
-(73, 'Grenada'),
-(74, 'Guam'),
-(75, 'Guatemala'),
-(76, 'Guiana'),
-(77, 'Guinea'),
-(78, 'Guyana'),
-(79, 'Haiti'),
-(80, 'Hondoras'),
-(81, 'Hong Kong'),
-(82, 'Hungary'),
-(83, 'Iceland'),
-(84, 'India'),
-(85, 'Indonesia'),
-(86, 'Iran'),
-(87, 'Iraq'),
-(88, 'Ireland'),
-(89, 'Israel'),
-(90, 'Italy'),
-(91, 'Jamaica'),
-(92, 'Japan'),
-(93, 'Jordan'),
-(94, 'Kazakhstan'),
-(95, 'Kenya'),
-(96, 'Kiribati'),
-(97, 'Korea'),
-(98, 'Kyrgyzstan'),
-(99, 'Lao'),
-(100, 'Latvia'),
-(101, 'Lesotho'),
-(102, 'Liberia'),
-(103, 'Liechtenstein'),
-(104, 'Lithuania'),
-(105, 'Luxembourg'),
-(106, 'Macau'),
-(107, 'Macedonia'),
-(108, 'Madagascar'),
-(109, 'Malawi'),
-(110, 'Malaysia'),
-(111, 'Maldives'),
-(112, 'Mali'),
-(113, 'Malta'),
-(114, 'Marshal Islands'),
-(115, 'Martinique'),
-(116, 'Mauritania'),
-(117, 'Mauritius'),
-(118, 'Mayotte'),
-(119, 'Mexico'),
-(120, 'Micronesia'),
-(121, 'Moldova'),
-(122, 'Monaco'),
-(123, 'Mongolia'),
-(124, 'Montserrat'),
-(125, 'Morocco'),
-(126, 'Mozambique'),
-(127, 'Myanmar'),
-(128, 'Namibia'),
-(129, 'Nauru'),
-(130, 'Nepal'),
-(131, 'Netherlands'),
-(132, 'New Caledonia'),
-(133, 'New Guinea'),
-(134, 'New Zealand'),
-(135, 'Nicaragua'),
-(136, 'Nigeria'),
-(137, 'Niue'),
-(138, 'Norfolk Island'),
-(139, 'Norway'),
-(140, 'Palau'),
-(141, 'Panama'),
-(142, 'Paraguay'),
-(143, 'Peru'),
-(144, 'Puerto'),
-(145, 'Philippines'),
-(146, 'Poland'),
-(147, 'Polynesia'),
-(148, 'Portugal'),
-(149, 'Romania'),
-(150, 'Russia'),
-(151, 'Rwanda'),
-(152, 'Saint Lucia'),
-(153, 'Samoa'),
-(154, 'San Marino'),
-(155, 'Senegal'),
-(156, 'Seychelles'),
-(157, 'Sierra Leone'),
-(158, 'Singapore'),
-(159, 'Slovakia'),
-(160, 'Slovenia'),
-(161, 'Somalia'),
-(162, 'South Africa'),
-(163, 'Spain'),
-(164, 'Sri Lanka'),
-(165, 'St. Helena'),
-(166, 'Sudan'),
-(167, 'Suriname'),
-(168, 'Swaziland'),
-(169, 'Sweden'),
-(170, 'Switzerland'),
-(171, 'Taiwan'),
-(172, 'Tajikistan'),
-(173, 'Tanzania'),
-(174, 'Thailand'),
-(175, 'Togo'),
-(176, 'Tokelau'),
-(177, 'Tonga'),
-(178, 'Trinidad'),
-(179, 'Tunisia'),
-(180, 'Turkey'),
-(181, 'Uganda'),
-(182, 'Ukraine'),
-(183, 'United Kingdom'),
-(184, 'United States'),
-(185, 'Uruguay'),
-(186, 'Uzbekistan'),
-(187, 'Vanuatu'),
-(188, 'Venezuela'),
-(189, 'Vietnam'),
-(190, 'Virgin Islands'),
-(191, 'Yugoslavia'),
-(192, 'Zaire'),
-(193, 'Zambia'),
-(194, 'Zimbabwe');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_director`
---
-
-CREATE TABLE `tbl_director` (
-  `director_id` smallint(5) UNSIGNED NOT NULL,
-  `director_name` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_director`
---
-
-INSERT INTO `tbl_director` (`director_id`, `director_name`) VALUES
-(1, 'James Gunn'),
-(2, 'Christopher Nolan'),
-(3, 'James Mangold'),
-(4, 'Joon-ho Bong'),
-(5, 'Bill Condon'),
-(6, 'Mel Gibson'),
-(7, 'Tim Miller'),
-(8, 'Denis Villeneuve '),
-(9, 'Dexter Fletcher'),
-(10, 'Mike Mitchell'),
-(11, 'Walt Dohrn'),
-(12, 'Alejandro Gonzalez Inarritu'),
-(13, 'John Crowley '),
-(14, 'Robert Zemeckis'),
-(15, 'Florian Gallenberger '),
-(16, 'J.J. Abrams'),
-(17, 'Damien Chazelle'),
-(18, 'Joseph Gordon-Levitt '),
-(19, 'Alfonso Cuaron'),
-(20, 'Ang Lee'),
-(21, 'David O. Russell');
 
 -- --------------------------------------------------------
 
@@ -409,238 +92,6 @@ INSERT INTO `tbl_genre` (`genre_id`, `genre_name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_language`
---
-
-CREATE TABLE `tbl_language` (
-  `lang_id` smallint(5) UNSIGNED NOT NULL,
-  `lang_name` varchar(250) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_language`
---
-
-INSERT INTO `tbl_language` (`lang_id`, `lang_name`) VALUES
-(1, 'Abkhaz'),
-(2, 'Afar'),
-(3, 'Afrikaans'),
-(4, 'Akan'),
-(5, 'Albanian'),
-(6, 'Amharic'),
-(7, 'Arabic'),
-(8, 'Aragonese'),
-(9, 'Armenian'),
-(10, 'Assamese'),
-(11, 'Avaric'),
-(12, 'Avestan'),
-(13, 'Aymara'),
-(14, 'Azerbaijani'),
-(15, 'Bambara'),
-(16, 'Bashkir'),
-(17, 'Basque'),
-(18, 'Belarusian'),
-(19, 'Bengali'),
-(20, 'Bihari'),
-(21, 'Bislama'),
-(22, 'Bosnian'),
-(23, 'Breton'),
-(24, 'Bulgarian'),
-(25, 'Burmese'),
-(26, 'Catalan'),
-(27, 'Valencian'),
-(28, 'Chamorro'),
-(29, 'Chechen'),
-(30, 'Chichewa'),
-(31, 'Chewa'),
-(32, 'Nyanja'),
-(33, 'Chinese'),
-(34, 'Chuvash'),
-(35, 'Cornish'),
-(36, 'Corsican'),
-(37, 'Cree'),
-(38, 'Croatian'),
-(39, 'Czech'),
-(40, 'Danish'),
-(41, 'Divehi'),
-(42, 'Dhivehi'),
-(43, 'Maldivian'),
-(44, 'Dutch'),
-(45, 'English'),
-(46, 'Esperanto'),
-(47, 'Estonian'),
-(48, 'Ewe'),
-(49, 'Faroese'),
-(50, 'Fijian'),
-(51, 'Finnish'),
-(52, 'French'),
-(53, 'Fula'),
-(54, 'Fulah'),
-(55, 'Pulaar'),
-(56, 'Pular'),
-(57, 'Galician'),
-(58, 'Georgian'),
-(59, 'German'),
-(60, 'Greek'),
-(61, 'Guaraní'),
-(62, 'Gujarati'),
-(63, 'Haitian'),
-(64, 'Haitian Creole'),
-(65, 'Hausa'),
-(66, 'Hebrew'),
-(67, 'Herero'),
-(68, 'Hindi'),
-(69, 'Hiri Motu'),
-(70, 'Hungarian'),
-(71, 'Interlingua'),
-(72, 'Indonesian'),
-(73, 'Interlingue'),
-(74, 'Irish'),
-(75, 'Igbo'),
-(76, 'Inupiaq'),
-(77, 'Ido'),
-(78, 'Icelandic'),
-(79, 'Italian'),
-(80, 'Inuktitut'),
-(81, 'Japanese'),
-(82, 'Javanese'),
-(83, 'Kalaallisut'),
-(84, 'Greenlandic'),
-(85, 'Kannada'),
-(86, 'Kanuri'),
-(87, 'Kashmiri'),
-(88, 'Kazakh'),
-(89, 'Khmer'),
-(90, 'Kikuyu'),
-(91, 'Gikuyu'),
-(92, 'Kinyarwanda'),
-(93, 'Kirghiz'),
-(94, 'Kyrgyz'),
-(95, 'Komi'),
-(96, 'Kongo'),
-(97, 'Korean'),
-(98, 'Kurdish'),
-(99, 'Kwanyama'),
-(100, 'Kuanyama'),
-(101, 'Latin'),
-(102, 'Luxembourgish'),
-(103, 'Letzeburgesch'),
-(104, 'Luganda'),
-(105, 'Limburgish'),
-(106, 'Limburgan'),
-(107, 'Limburger'),
-(108, 'Lingala'),
-(109, 'Lao'),
-(110, 'Lithuanian'),
-(111, 'Luba-Katanga'),
-(112, 'Latvian'),
-(113, 'Manx'),
-(114, 'Macedonian'),
-(115, 'Malagasy'),
-(116, 'Malay'),
-(117, 'Malayalam'),
-(118, 'Maltese'),
-(119, 'Maori'),
-(120, 'Marathi'),
-(121, 'Marshallese'),
-(122, 'Mongolian'),
-(123, 'Nauru'),
-(124, 'Navajo'),
-(125, 'Navaho'),
-(126, 'Norwegian Bokmal'),
-(127, 'North Ndebele'),
-(128, 'Nepali'),
-(129, 'Ndonga'),
-(130, 'Norwegian Nynorsk'),
-(131, 'Norwegian'),
-(132, 'Nuosu'),
-(133, 'South Ndebele'),
-(134, 'Occitan'),
-(135, 'Ojibwe'),
-(136, 'Ojibwa'),
-(137, 'Old Church Slavonic'),
-(138, 'Church Slavic'),
-(139, 'Church Slavonic'),
-(140, 'Old Bulgarian'),
-(141, 'Old Slavonic'),
-(142, 'Oromo'),
-(143, 'Oriya'),
-(144, 'Ossetian'),
-(145, 'Ossetic'),
-(146, 'Panjabi'),
-(147, 'Punjabi'),
-(148, 'Pali'),
-(149, 'Persian'),
-(150, 'Polish'),
-(151, 'Pashto'),
-(152, 'Pushto'),
-(153, 'Portuguese'),
-(154, 'Quechua'),
-(155, 'Romansh'),
-(156, 'Kirundi'),
-(157, 'Romanian'),
-(158, 'Moldavian'),
-(159, 'Moldovan'),
-(160, 'Russian'),
-(161, 'Sanskrit'),
-(162, 'Sardinian'),
-(163, 'Sindhi'),
-(164, 'Northern Sami'),
-(165, 'Samoan'),
-(166, 'Sango'),
-(167, 'Serbian'),
-(168, 'Scottish Gaelic'),
-(169, 'Gaelic'),
-(170, 'Shona'),
-(171, 'Sinhala'),
-(172, 'Sinhalese'),
-(173, 'Slovak'),
-(174, 'Slovene'),
-(175, 'Somali'),
-(176, 'Southern Sotho'),
-(177, 'Spanish'),
-(178, 'Castilian'),
-(179, 'Sundanese'),
-(180, 'Swahili'),
-(181, 'Swati'),
-(182, 'Swedish'),
-(183, 'Tamil'),
-(184, 'Telugu'),
-(185, 'Tajik'),
-(186, 'Thai'),
-(187, 'Tigrinya'),
-(188, 'Tibetan Standard'),
-(189, 'Tibetan'),
-(190, 'Turkmen'),
-(191, 'Tagalog'),
-(192, 'Tswana'),
-(193, 'Tonga'),
-(194, 'Turkish'),
-(195, 'Tsonga'),
-(196, 'Tatar'),
-(197, 'Twi'),
-(198, 'Tahitian'),
-(199, 'Uighur'),
-(200, 'Uyghur'),
-(201, 'Ukrainian'),
-(202, 'Urdu'),
-(203, 'Uzbek'),
-(204, 'Venda'),
-(205, 'Vietnamese'),
-(206, 'Volapuk'),
-(207, 'Walloon'),
-(208, 'Welsh'),
-(209, 'Wolof'),
-(210, 'Western Frisian'),
-(211, 'Xhosa'),
-(212, 'Yiddish'),
-(213, 'Yoruba'),
-(214, 'Zhuang'),
-(215, 'Chuang');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_movies`
 --
 
@@ -649,191 +100,32 @@ CREATE TABLE `tbl_movies` (
   `movies_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
   `movies_title` varchar(125) NOT NULL,
   `movies_year` varchar(5) NOT NULL,
-  `movies_runtime` varchar(25) NOT NULL,
+  `decade` varchar(5) NOT NULL,
   `movies_storyline` text NOT NULL,
   `movies_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
-  `movies_release` varchar(125) NOT NULL
+  `permission` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `tbl_movies`
 --
 
-INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `movies_runtime`, `movies_storyline`, `movies_trailer`, `movies_release`) VALUES
-(1, 'guardians2.jpg', 'Guardians of the Galaxy Vol. 2', '2017', '2h 16m', 'The Guardians must fight to keep their newfound family together as they unravel the mystery of Peter Quill&rsquo;s true parentage.', 'Guardians2.mp4', 'May 5, 2017'),
-(2, 'dunkirk.jpg', 'Dunkirk', '2017', '1h 46m', 'Allied soldiers from Belgium, the British Empire and France are surrounded by the German army and evacuated during a fierce battle in World War II.', 'Dunkirk.mp4', 'July 21, 2017'),
-(3, 'logan.jpg', 'Logan', '2017', '2h 17m', 'In the near future, a weary Logan cares for an ailing Professor X, somewhere on the Mexican border. However, Logan&rsquo;s attempts to hide from the world, and his legacy, are upended when a young mutant arrives, pursued by dark forces.', 'Logan.mp4', 'March 3,2017'),
-(4, 'okja.jpg', 'Okja', '2017', '2h', ' Meet Mija, a young girl who risks everything to prevent a powerful, multi-national company from kidnapping her best friend - a fascinating animal named Okja. ', 'Okja.mp4', 'June 28,2017'),
-(5, 'beauty.jpg', 'Beauty and the Beast', '2017', '2h 9min', 'An adaptation of the fairy tale about a monstrous-looking prince and a young woman who fall in love. ', 'Beauty.mp4', 'March 17, 2017'),
-(6, 'hacksaw.jpg', 'Hacksaw Ridge', '2016', '2h 19m', 'WWII American Army Medic Desmond T. Doss, who served during the Battle of Okinawa, refuses to kill people, and becomes the first man in American history to receive the Medal of Honor without firing a shot.', 'Hacksaw.mp4', 'November 4, 2016'),
-(7, 'deadpool.jpg', 'Deadpool', '2016', '1h 48m', 'A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.', 'Bloodpool.mp4', 'Febuary 12, 2016'),
-(8, 'arrival.jpg', 'Arrival', '2016', '1h 56m', 'When twelve mysterious spacecraft appear around the world, linguistics professor Louise Banks is tasked with interpreting the language of the apparent alien visitors.', 'Arrival.mp4', 'November 11, 2016'),
-(9, 'eddie.jpg', 'Eddie the Eagle', '2016', '1h 46m', 'The story of Eddie Edwards, the notoriously tenacious British underdog ski jumper who charmed the world at the 1988 Winter Olympics.', 'Eddie.mp4', 'Febuary 26, 2016'),
-(10, 'trolls.jpg', 'Trolls', '2016', '1h 32m', 'After the Bergens invade Troll Village, Poppy, the happiest Troll ever born, and the curmudgeonly Branch set off on a journey to rescue her friends.', 'Trolls.mp4', 'November 4, 2016'),
-(11, 'revenant.jpg', 'The Revenant', '2015', '2h 36m', 'A frontiersman on a fur trading expedition in the 1820s fights for survival after being mauled by a bear and left for dead by members of his own hunting team.', 'Revenant.mp4', 'January 8, 2015'),
-(12, 'brooklyn.jpg', 'Brooklyn', '2015', '1h 57m', 'An Irish immigrant lands in 1950s Brooklyn, where she quickly falls into a romance with a local. When her past catches up with her, however, she must choose between two countries and the lives that exist within.', 'Brooklyn.mp4', 'November 25, 2015'),
-(13, 'walk.jpg', 'The Walk', '2015', '2h 3m', 'In 1974, high-wire artist Philippe Petit recruits a team of people to help him realize his dream: to walk the immense void between the World Trade Center towers.', 'Walk.mp4', 'October 9, 2015'),
-(14, 'colonia.jpg', 'Colonia', '2015', '1h 46m', 'A young woman&rsquo;s desperate search for her abducted boyfriend that draws her into the infamous Colonia Dignidad, a sect nobody has ever escaped from.', 'Colonia.mp4', 'April 15, 2015'),
-(15, 'force.jpg', 'Star Wars: The Force Awakens', '2015', '2h 16m', 'Three decades after the Empire&rsquo;s defeat, a new threat arises in the militant First Order. Stormtrooper defector Finn and spare parts scavenger Rey are caught up in the Resistance&rsquo;s search for the missing Luke Skywalker.', 'Force.mp4', 'December 18, 2015'),
-(16, 'whiplash.jpg', 'Whiplash', '2014', '1h 47m', 'A promising young drummer enrolls at a cut-throat music conservatory where his dreams of greatness are mentored by an instructor who will stop at nothing to realize a student\'s potential.', 'Whiplash.mp4', 'October 15, 2014'),
-(17, 'guardians.jpg', 'Guardians of the Galaxy', '2014', '2h 1m', 'A group of intergalactic criminals are forced to work together to stop a fanatical warrior from taking control of the universe.', 'Guardians.mp4', 'August 1, 2014'),
-(18, 'donjon.jpg', 'Don Jon', '2013', '1h 30m', 'A New Jersey guy dedicated to his family, friends, and church, develops unrealistic expectations from watching porn and works to find happiness and intimacy with his potential true love.', 'donjon.mp4', 'September 27, 2013'),
-(19, 'gravity.jpg', 'Gravity', '2013', '1h 31m', 'Two astronauts work together to survive after an accident which leaves them alone in space.', 'Gravity.mp4', 'October 4, 2013'),
-(20, 'pi.jpg', 'Life of Pi', '2012', '2h 7m', 'A young man who survives a disaster at sea is hurtled into an epic journey of adventure and discovery. While cast away, he forms an unexpected connection with another survivor: a fearsome Bengal tiger.', 'Pi.jpg', 'November 21, 2012'),
-(21, 'silver.jpg', 'Silver Linings Playbook', '2012', '2h 2m', 'After a stint in a mental institution, former teacher Pat Solitano moves back in with his parents and tries to reconcile with his ex-wife. Things get more challenging when Pat meets Tiffany, a mysterious girl with problems of her own.', 'Silver.jpg', 'December 25, 2012');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_mov_cast`
---
-
-CREATE TABLE `tbl_mov_cast` (
-  `mov_cast_id` mediumint(8) UNSIGNED NOT NULL,
-  `movies_id` mediumint(9) NOT NULL,
-  `cast_id` mediumint(9) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_mov_cast`
---
-
-INSERT INTO `tbl_mov_cast` (`mov_cast_id`, `movies_id`, `cast_id`) VALUES
-(1, 1, 1),
-(2, 1, 2),
-(3, 1, 3),
-(4, 1, 4),
-(5, 1, 5),
-(6, 2, 6),
-(7, 2, 7),
-(8, 2, 8),
-(9, 2, 9),
-(10, 2, 10),
-(11, 3, 11),
-(12, 3, 12),
-(13, 3, 13),
-(14, 3, 14),
-(15, 3, 15),
-(16, 4, 16),
-(17, 4, 17),
-(18, 4, 18),
-(19, 4, 19),
-(20, 4, 20),
-(21, 5, 21),
-(22, 5, 22),
-(23, 5, 23),
-(24, 5, 24),
-(25, 5, 25),
-(26, 6, 26),
-(27, 6, 27),
-(28, 6, 28),
-(29, 6, 29),
-(30, 6, 30),
-(31, 7, 31),
-(32, 7, 32),
-(33, 7, 33),
-(34, 7, 34),
-(35, 7, 35),
-(36, 8, 36),
-(37, 8, 37),
-(38, 8, 38),
-(39, 8, 39),
-(40, 8, 40),
-(41, 9, 41),
-(42, 10, 42),
-(43, 11, 43),
-(44, 12, 44),
-(45, 13, 45),
-(46, 14, 21),
-(47, 15, 46),
-(48, 16, 47),
-(49, 17, 1),
-(50, 18, 45),
-(51, 19, 52),
-(52, 20, 53),
-(53, 21, 5);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_mov_country`
---
-
-CREATE TABLE `tbl_mov_country` (
-  `mov_country_id` mediumint(8) UNSIGNED NOT NULL,
-  `movies_id` mediumint(9) NOT NULL,
-  `country_id` smallint(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_mov_country`
---
-
-INSERT INTO `tbl_mov_country` (`mov_country_id`, `movies_id`, `country_id`) VALUES
-(1, 1, 34),
-(2, 1, 134),
-(3, 1, 184),
-(4, 2, 184),
-(5, 2, 183),
-(6, 2, 131),
-(7, 2, 64),
-(8, 3, 12),
-(9, 3, 34),
-(10, 3, 184),
-(11, 4, 184),
-(12, 4, 97),
-(13, 5, 183),
-(14, 5, 184),
-(15, 6, 184),
-(16, 6, 12),
-(17, 7, 184),
-(18, 8, 184),
-(19, 9, 183),
-(20, 9, 184),
-(21, 9, 68),
-(22, 10, 184),
-(23, 11, 184),
-(24, 11, 81),
-(25, 11, 171);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_mov_director`
---
-
-CREATE TABLE `tbl_mov_director` (
-  `mov_director_id` mediumint(8) UNSIGNED NOT NULL,
-  `movies_id` mediumint(9) NOT NULL,
-  `director_id` smallint(6) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_mov_director`
---
-
-INSERT INTO `tbl_mov_director` (`mov_director_id`, `movies_id`, `director_id`) VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 3),
-(4, 4, 4),
-(5, 5, 5),
-(6, 6, 6),
-(7, 7, 7),
-(8, 8, 8),
-(9, 9, 9),
-(10, 10, 10),
-(11, 10, 11),
-(12, 11, 12),
-(13, 12, 13),
-(14, 13, 14),
-(15, 14, 15),
-(16, 15, 16),
-(17, 16, 17),
-(18, 17, 1),
-(19, 18, 19),
-(20, 19, 20),
-(21, 20, 21);
+INSERT INTO `tbl_movies` (`movies_id`, `movies_cover`, `movies_title`, `movies_year`, `decade`, `movies_storyline`, `movies_trailer`, `permission`) VALUES
+(1, 'Cinderella.png', 'Cinderella', '1950', '1950', 'Cinderella is a 1950 American animated musical fantasy film produced by Walt Disney and originally released by RKO Radio Pictures. Based on the fairy tale of the same name by Charles Perrault, it is the 12th Disney animated feature film. The film was directed by Clyde Geronimi, Hamilton Luske, and Wilfred Jackson.', 'movie1_cinderella.mp4', 'Kid'),
+(2, 'Alice.png', 'Alice in Wonderland', '1951', '1950', 'Alice in Wonderland is a 1951 American animated musical fantasy-adventure film produced by Walt Disney Productions and based on the Alice books by Lewis Carroll. The 13th release of Disney\'s animated features, the film premiered in London on July 26, 1951, and in New York City on July 28, 1951. The film features the voices of Kathryn Beaumont as Alice, Sterling Holloway as the Cheshire Cat, Verna Felton as the Queen of Hearts, and Ed Wynn as the Mad Hatter.', 'movie2_AliceInWonderland.mp4', 'Kid'),
+(3, 'Witness.png', 'Witness For The Prosecution', '1957', '1950', 'Witness for the Prosecution is a 1957 American film co-adapted and directed by Billy Wilder and starring Tyrone Power, Marlene Dietrich, Charles Laughton, and Elsa Lanchester. The film, which has film noir elements, depicts an English courtroom drama. Set in the Old Bailey in London, the picture is based on the play of the same name by Agatha Christie and deals with the trial of a man accused of murder. The first film adaptation of Christie\'s story, Witness for the Prosecution was adapted for the screen by Larry Marcus, Harry Kurnitz and Wilder. The film received positive reviews and six Academy Award nominations.', 'movie3_witnessForTheProsecution.mp4', 'Parent'),
+(4, 'psycho.png', 'Psycho', '2017', '1960', 'Psycho is a 1960 American psychological horror film directed and produced by Alfred Hitchcock, and written by Joseph Stefano. It stars Anthony Perkins, Janet Leigh, John Gavin, Vera Miles, and Martin Balsam, and was based on the 1959 novel of the same name by Robert Bloch. The film centers on an encounter between a secretary, Marion Crane (Leigh), who ends up at a secluded motel after stealing money from her employer, and the motel\'s owner-manager, Norman Bates (Perkins), and its aftermath.', 'movie4_Psycho.mp4', 'Parent'),
+(5, 'jungle.png', 'The Jungle Book', '1967', '1960', 'The Jungle Book is a 1967 American animated musical comedy film produced by Walt Disney Productions. Based on Rudyard Kipling\'s book of the same name, it is the 19th Disney animated feature film. Directed by Wolfgang Reitherman, it was the last film to be produced by Walt Disney, who died during its production. The plot follows Mowgli, a feral child raised in the Indian jungle by wolves, as his friends Bagheera the panther and Baloo the bear try to convince him to leave the jungle before the evil tiger Shere Khan arrives.', 'movie5_theJungleBook.mp4', 'Kid'),
+(6, 'breakfast.png', 'Breakfast At Tiffanys', '1961', '1960', 'Hepburn\'s portrayal of Holly Golightly as the naïve, eccentric café society girl is generally considered to be one of the actress\'s most memorable and identifiable roles. Hepburn regarded it as one of her most challenging roles, since she was an introvert required to play an extrovert.', 'movie6_breakfastAtTiffanys.mp4', 'Parent'),
+(7, 'godfather.png', 'The Godfather', '1972', '1970', 'The Godfather is a 1972 American crime film directed by Francis Ford Coppola and produced by Albert S. Ruddy, based on Mario Puzo\'s best-selling novel of the same name. It is the first installment in The Godfather trilogy. It stars Marlon Brando and Al Pacino as the father and son of a fictional New York crime family. The story, spanning 1945 to 1955, chronicles the family under the patriarch Vito Corleone (Brando), focusing on the transformation of the son Michael Corleone (Pacino), raised to have a life outside of crime, from reluctant family outsider to ruthless mafia boss.', 'movie7_theGodfather.mp4', 'Parent'),
+(8, 'cuckoo.png', 'One Flew Over The Cuckoo\'s Nest', '1975', '1970', 'One Flew Over the Cuckoo\'s Nest is a 1975 American comedy-drama film directed by Miloš Forman, based on the 1962 novel One Flew Over the Cuckoo\'s Nest by Ken Kesey and the play version adapted from the novel by Dale Wasserman. The film stars Jack Nicholson as Randle McMurphy, a new patient at a mental institution, and features a supporting cast of Louise Fletcher, William Redfield, Will Sampson, Sydney Lassick, Brad Dourif, Danny DeVito and Christopher Lloyd in his film debut.', 'movie8_oneFlewOverTheCuckoosNest.mp4', 'Parent'),
+(9, 'pooh.png', 'The Many Adventures of Winnie the Pooh', '1977', '1970', 'The Many Adventures of Winnie the Pooh is a 1977 American animated musical drama film produced by Walt Disney Productions and distributed by Buena Vista Distribution. It is the 22nd Disney animated feature film and was first released on a double bill with The Littlest Horse Thieves on March 11, 1977.', 'movie9_The Many Adventures of Winnie the Pooh.mp4', 'Kid'),
+(10, 'airplane.png', 'Airplane!', '1980', '1980', 'Airplane! was released by Paramount Pictures and was a critical and financial success, grossing $158 million worldwide against a budget of $3.5 million.[8] The film\'s creators received the Writers Guild of America Award for Best Adapted Comedy, and nominations for the Golden Globe Award for Best Motion Picture – Musical or Comedy and for the BAFTA Award for Best Screenplay.', 'movie10_Airplane!.mp4', 'Kid'),
+(11, 'popeye.png', 'Popeye', '1980', '1980', 'Popeye is a 1980 American musical comedy film directed by Robert Altman and distributed by Paramount Pictures. It is based on E. C. Segar\'s comics character of the same name. It was written by Jules Feiffer and stars Robin Williams[2] as Popeye the Sailor Man and Shelley Duvall as Olive Oyl. Its story follows Popeye\'s adventures as he arrives in the town of Sweethaven.', 'movie11_popeye.mp4', 'Kid'),
+(12, 'ordinaryPeople.png', 'Ordinary People', '1980', '1980', 'The story concerns the disintegration of an upper-middle class family in Lake Forest, Illinois, following the accidental death of one of their two sons and the attempted suicide of the other. The screenplay by Alvin Sargent was based upon the 1976 novel Ordinary People by Judith Guest.', 'movie12_OrdinaryPeople.mp4', 'Parent'),
+(13, 'home_alone.png', 'Home Alone', '1990', '1990', 'An eight-year-old troublemaker must protect his house from a pair of burglars when he is accidentally left home alone by his family during Christmas vacation.', 'movie13_homeAlone.mp4', 'Kid'),
+(14, 'pulpFiction.png', 'Pulp Fiction', '1994', '1990', 'Pulp Fiction is a 1994 American crime film written and directed by Quentin Tarantino, who conceived it with Roger Avary.[5] Starring John Travolta, Samuel L. Jackson, Bruce Willis, Tim Roth, Ving Rhames, and Uma Thurman, it tells several stories of criminal Los Angeles. The title refers to the pulp magazines and hardboiled crime novels popular during the mid-20th century, known for their graphic violence and punchy dialogue.', 'movie14_pulpFiction.mp4', 'Parent'),
+(15, 'Titanic.png', 'Titanic', '1997', '1990', 'This spectacular epic re-creates the ill-fated maiden voyage of the White Star Line\'s $7.5 million R.M.S Titanic and the tragic sea disaster of April 15, 1912. Running over three hours and made with the combined contributions of two major studios (20th Century-Fox, Paramount) at a cost of more than $200 million, Titanic ranked as the most expensive film in Hollywood history at the time of its release, and became the most successful. ', 'movie15_Titanic.mp4', 'Parent');
 
 -- --------------------------------------------------------
 
@@ -892,118 +184,74 @@ INSERT INTO `tbl_mov_genre` (`mov_genre_id`, `movies_id`, `genre_id`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mov_lang`
+-- Table structure for table `tbl_music`
 --
 
-CREATE TABLE `tbl_mov_lang` (
-  `mov_lang_id` smallint(5) UNSIGNED NOT NULL,
-  `movies_id` mediumint(9) NOT NULL,
-  `language_id` smallint(6) NOT NULL
+CREATE TABLE `tbl_music` (
+  `music_id` int(11) NOT NULL,
+  `music_cover` varchar(75) NOT NULL,
+  `music_title` varchar(125) NOT NULL,
+  `music_year` varchar(5) NOT NULL,
+  `decade` varchar(5) NOT NULL,
+  `music_artist` varchar(125) NOT NULL,
+  `music_trailer` varchar(75) NOT NULL,
+  `permission` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_mov_lang`
+-- Dumping data for table `tbl_music`
 --
 
-INSERT INTO `tbl_mov_lang` (`mov_lang_id`, `movies_id`, `language_id`) VALUES
-(1, 1, 45),
-(2, 2, 45),
-(3, 2, 52),
-(4, 2, 59),
-(5, 3, 45),
-(6, 3, 177),
-(7, 4, 45),
-(8, 4, 177),
-(9, 4, 97),
-(10, 5, 45),
-(11, 6, 45),
-(12, 6, 81),
-(13, 7, 45),
-(14, 8, 45),
-(15, 8, 33),
-(16, 8, 160),
-(17, 9, 45),
-(18, 9, 126),
-(19, 9, 59),
-(20, 10, 45),
-(21, 11, 45),
-(22, 11, 52);
+INSERT INTO `tbl_music` (`music_id`, `music_cover`, `music_title`, `music_year`, `decade`, `music_artist`, `music_trailer`, `permission`) VALUES
+(1, 'everybody_loves_somebody.png', 'Put Your Head On My Shoulder', '1959', '1950', 'Paul Anka', 'music1_putYourHeadOnMyShouder.mp4', 'Kid'),
+(2, 'return_to_me.png', 'Return to Me', '1958', '1950', 'Dean Martin', 'music2_ReturnToMe.mp4', 'Kid'),
+(3, 'Jailhouse_Rock.png', 'Jailhouse Rock', '1957', '1950', 'Elvis Presley', 'music3_JailhouseRock.mp4', 'Kid'),
+(4, 'please_mister_postman.png', 'Please Mister Postman', '1961', '1960', 'The Marvelettes', 'music4_PleaseMr.Postman.mp4', 'Kid'),
+(5, 'everybody_loves_somebody.png', 'Everybody Loves Somebody', '1965', '1960', 'Dean Martin', 'music5_EverybodyLovesSomebody.mp4', 'Kid'),
+(6, 'stand_by_me.png', 'Stand By Me', '1961', '1960', 'Ben E. King', 'music6_standByMe.mp4', 'Kid'),
+(7, 'close_to_you.png', 'Close to You', '1970', '1970', 'Carpenters', 'music7_Close To You.mp4', 'Kid'),
+(8, 'let_it_be.png', 'Let It Be', '1970', '1970', 'The Beatles', 'music8_LetItBe.mp4', 'Kid'),
+(9, 'bohemian_rhapsody.png', 'Bohemian Rhapsody', '1975', '1970', 'Queen', 'music9_BohemianRhapsody.mp4', 'Kid'),
+(10, 'never_gonna_give_up.png', 'Never Gonna Give Up', '1987', '1980', 'Rick Astley', 'music12_neverGonnaGiveUp.mp4', 'Kid'),
+(11, 'take_on_me.png', 'Take On Me', '1986', '1980', 'aha', 'music10_TakeOnMe.mp4', 'Kid'),
+(12, 'Billie_jeans.png', 'Billie Jean', '1983', '1980', 'Michael Jackson', 'music11_BillieJean.mp4', 'Kid'),
+(13, 'november_Rain.png', 'November Rain', '1992', '1990', 'Gun n\' Roses', 'music13_novemberRain.mp4', 'Kid'),
+(14, 'smell_like_teen_spirit.png', 'Smells Like Teen Spirit', '1991', '1990', 'Nirvana', 'music14_SmellsLikeTeenSpirit.mp4', 'Kid'),
+(15, 'say_my_name.png', 'Say My Name', '1999', '1990', 'Destiny\'s Child', 'music15_SayMyName.mp4', 'Kid');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_mov_studio`
+-- Table structure for table `tbl_tv`
 --
 
-CREATE TABLE `tbl_mov_studio` (
-  `mov_studio_id` mediumint(8) UNSIGNED NOT NULL,
-  `movies_id` mediumint(9) NOT NULL,
-  `studio_id` smallint(6) NOT NULL
+CREATE TABLE `tbl_tv` (
+  `tv_id` int(11) NOT NULL,
+  `tv_cover` varchar(75) NOT NULL DEFAULT 'cover_default.jpg',
+  `tv_title` varchar(125) NOT NULL,
+  `tv_year` varchar(15) NOT NULL,
+  `decade` varchar(20) NOT NULL,
+  `tv_storyline` text NOT NULL,
+  `tv_trailer` varchar(75) NOT NULL DEFAULT 'trailer_default.jpg',
+  `permission` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tbl_mov_studio`
+-- Dumping data for table `tbl_tv`
 --
 
-INSERT INTO `tbl_mov_studio` (`mov_studio_id`, `movies_id`, `studio_id`) VALUES
-(1, 1, 1),
-(2, 2, 2),
-(3, 3, 3),
-(4, 4, 4),
-(5, 5, 5),
-(6, 6, 6),
-(7, 7, 7),
-(8, 8, 8),
-(9, 9, 9),
-(10, 10, 10),
-(11, 11, 11),
-(12, 12, 12),
-(13, 13, 13),
-(14, 14, 14),
-(15, 15, 15),
-(16, 16, 16),
-(17, 17, 1),
-(18, 18, 17),
-(19, 19, 18),
-(20, 20, 19),
-(21, 21, 20);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_studio`
---
-
-CREATE TABLE `tbl_studio` (
-  `studio_id` smallint(5) UNSIGNED NOT NULL,
-  `studio_name` varchar(125) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `tbl_studio`
---
-
-INSERT INTO `tbl_studio` (`studio_id`, `studio_name`) VALUES
-(1, 'Marvel Studios'),
-(2, 'Syncopy'),
-(3, 'Donners Company'),
-(4, 'Kate Street Picture Company'),
-(5, 'Mandeville Films'),
-(6, 'Cross Creek Pictures'),
-(7, 'Twentieth Century Fox Film Corporation'),
-(8, 'Lava Bear Films'),
-(9, 'Hurwitz Creative'),
-(10, 'DreamWorks Animation'),
-(11, 'Regency Enterprises'),
-(12, 'Wildgaze Films'),
-(13, 'Sony Pictures Entertainment (SPE)'),
-(14, 'Majestic Filmproduktion'),
-(15, 'Lucasfilm'),
-(16, 'Bold Films'),
-(17, 'Voltage Pictures'),
-(18, 'Warner Bros.'),
-(19, 'Fox 2000 Pictures'),
-(20, 'Weinstein Company');
+INSERT INTO `tbl_tv` (`tv_id`, `tv_cover`, `tv_title`, `tv_year`, `decade`, `tv_storyline`, `tv_trailer`, `permission`) VALUES
+(1, 'show1_Ozzie&Harriet.png', 'Adventures of Ozzie & Harriet', '1952 - 1966', '1950 1960', 'The Adventures of Ozzie and Harriet is a sitcom that aired on ABC from 1952 until 1966 starring the real life Nelson family. After a long run on radio, the show was brought to television where it continued its success, running on both radio and TV for a couple of years. The series attracted large audiences, and although it was never a top-ten hit, it became synonymous with the 1950s ideal American family life. It is the longest-running live-action sitcom in US TV history.', 'show1_Adventures of Ozzie and Harriet.mp4', 'Kid'),
+(2, 'show2_Bonanza.png', 'Bonanza', '1959 - 1973', '1950 1960 1970', 'The Cartwright\'s thousand-square-mile Ponderosa Ranch is located near Virginia City, Nevada, site of the Comstock Silver Lode, during and after the Civil War. Each of the sons was born to a different wife of Ben\'s; with none of the mothers still alive. Join Ben (Lorne Greene), Adam (Pernell Roberts), Hoss (Dan Blocker) and Little Joe (Michael Landon) as they rewrite the book on the western genre. These were the days where family values and the fight for justice were backed up by six-guns that always had right on their side.', 'show2_Bonanza.mp4', 'Parent'),
+(3, 'show3_ILoveLucy.png', 'I Love Lucy', '1951 - 1957', '1950', 'Lucy Ricardo is the wacky wife of Cuban bandleader Ricky Ricardo. Living in New York, (623 East 68th Street, Aprtment 3-B), Ricky tries to succeed in show business while Lucy -- always trying to help -- usually manages to get in some kind of trouble that drives Ricky crazy. Their best friends are Fred and Ethel Mertz, who are also their landlords. The two couples were almost inseparable, whatever the Ricardos did, so did the Mertzs. Usually, Ethel becomes Lucy\'s less-than-willing partner in crime. Ricky and Lucy welcomed little Ricky in 1953, whose birth was a national TV event. Later in the show\'s run, the Ricardos (and the Mertzes) moved to Hollywood, where Ricky tried to become a movie star.', 'show3_I Love Lucy.mp4', 'Kid'),
+(5, 'show4_AddamsFamily.png', 'The Addams Family', '1964 - 1966', '1960', 'The Addams Family television sitcom portrayed a monster family whose moribund physical appearances were counteracted by each family member\'s exuberance for passion and adventure. Premiering the same year as The Munsters, this short-lived series was one of the first two shows to take issue with the Leave It To Beaver aesthetic that dominated television throughout the 50s, in which perfect families narrowly defined normality in the American home. Instead, it starred a family feared by neighbors, who within the boundaries of their haunted Victorian mansion invented their own thriving, not to mention fun, culture. The Addams Family proved that outsiders could be extremely gracious, educated, and interesting, even if eccentricities rendered their looks a threat.', 'show5_The Addams Family .mp4', 'Kid'),
+(6, 'show6_Avengers.png', 'The Avengers', '1966 - 1969', '1960', 'The Avengers is a secret-agent thriller that almost bests James Bond. Jonathan Steed - an urbane, proper gentleman spy - and adventurous citizen Emma Peel repeatedly saved the world from diabolical schemes plotted by equally diabolical evil-doers (among them robots and man-eating monsters).Emma Peel, in her leather boots and mini-skirts, is now considered one of the most liberated women on 60\'s television.', 'show6_The avengers.mp4', 'Kid'),
+(7, 'show7_Charlie\'s Angel.png', 'Charlie\'s Angels', '1976 - 1981', '1970 1980', 'Once upon a time, there were three little girls who went to the police academy. And they were each assigned very hazardous duties but I took them all away from all that and now they work for me. My name is Charlie. Those famous words were heard every week from 1976 to 1981 during Charlie\'s Angels 5 year run. This ABC crime series began in September of 1976 introducing three stunning, sexy and young former policewoman, private detectives working for the Charles Townsend Detective Agency. The wealthy Charlie Townsend, voiced by John Forsythe, was their never-seen boss, who relayed assignments via a speaker telephone. The trio of Angels featured Sabrina Duncan; (Kate Jackson) the \"cool, smart, multilingual leader,\" Jill Munroe; (Farrah Fawcett-Majors) the \"athletic angel\" and finally Kelly Garrett; (Jaclyn Smith) the \"street wise angel.\" The Angels worked with their trusty male counter-part, John Bosley played by (David Doyle).', 'show7_Charlie\'s Angels .mp4', 'Parent'),
+(9, 'show9_Land_of_the_Lost.png', 'Land of the Lost', '1974 - 1976', '1970', 'Land of the Lost details the adventures of the Marshall family (father Rick and his children Will and Holly), who are trapped in an alternate universe or time warp inhabited by dinosaurs, a primate-type people called Pakuni, and aggressive humanoid/lizard creatures called Sleestak. The episode storylines focus on the family\'s efforts to survive and find a way back to their own world, but the exploration of the exotic inhabitants of the Land of the Lost is also an ongoing part of the story', 'show9_Land of the Lost.mp4', 'Kid'),
+(10, 'show10_Thomas.png', 'Thomas the Tank Engine & Friends', '1984', '1980', 'The series is set in the fictional island of Sodor, located in the Irish Sea. Sodor is depicted as located in Cumbria, near the historical town of Barrow-in-Furness Thomas the Tank Engine is an anthropomorphic steam locomotive, with a design loosely based on the LB&SCR E2 class (1913-1963). Thomas and his associates work at the North Western Railway, the main standard gauge rail network of Sodor. The series focuses on their work relationship.', 'show10_Thomas & Friends.mp4', 'Kid'),
+(11, 'show11_21_Jump_Street.png', '21 Jump Street', '1987 - 1991', '1980 1990', '21 Jump Street is an American police procedural crime drama television series that aired on the Fox Network and in first run syndication from 1987, to 1991, with a total of 103 episodes. The series focused on a squad of youthful-looking undercover police officers investigating crimes in high schools, colleges, and other teenage venues.', 'show11_ 21 Jump Street.mp4', 'Parent'),
+(12, 'show14_FreshPrinceOfBelAir.png', 'The Fresh Prince of Bel-Air', '1990 - 1996', '1990', 'When Will (Will Smith), an inner-city teenager from Philly is sent by his mother to live with his relatives (the Banks) in Bel-Air, everybody is in for a surprise. It is funny how influence can go both ways.', 'show14_The Fresh Prince Of Bel Air.mp4', 'Parent'),
+(13, 'show15_friends.png', 'Friends', '1994-2004', '1990', 'Six young people from New York, on their own and struggling to survive in the real world, find the companionship, comfort and support they get from each other to be the perfect antidote to the pressures of life.', 'show15_F.R.I.E.N.D.mp4', 'Parent');
 
 -- --------------------------------------------------------
 
@@ -1028,9 +276,9 @@ CREATE TABLE `tbl_user` (
   `user_name` varchar(250) NOT NULL,
   `user_pass` varchar(250) NOT NULL,
   `user_email` varchar(250) NOT NULL,
-  `user_date` timestamp NOT NULL DEFAULT current_timestamp(),
+  `user_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `user_ip` varchar(50) NOT NULL DEFAULT 'no',
-  `user_avatar` varchar(20) NOT NULL,
+  `user_avatar` varchar(20) NOT NULL DEFAULT 'parent',
   `user_permissions` int(11) NOT NULL,
   `user_admin` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -1040,11 +288,9 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`user_id`, `user_fname`, `user_name`, `user_pass`, `user_email`, `user_date`, `user_ip`, `user_avatar`, `user_permissions`, `user_admin`) VALUES
-(3, 'Trevor', 'user1', 'password', 'me@you.com', '2020-03-09 15:48:21', '172.20.0.1', 'olaf', 5, 1),
-(4, 'Kate', 'user2', 'password', 'me@ou.com', '2020-03-09 15:49:04', 'no', 'null', 5, 1),
-(5, 'Madelaine', 'user3', 'password', 'me@you.com', '2020-03-09 15:49:39', 'no', 'null', 3, 0),
-(6, 'Isabelle', 'user4', 'password', 'me@you.com', '2020-03-09 15:50:13', 'no', 'null', 2, 0),
-(7, 'Serena', 'user5', 'password', 'me@you.com', '2020-03-09 15:50:48', 'no', 'null', 2, 0);
+(3, 'Mikka', 'mikka', '123', 'mikkaazores@gmail.com', '2020-03-09 15:48:21', '::1', 'parent', 5, 1),
+(4, 'Megan', 'meg', '123', 'megannguyen@gmail.com', '2020-03-09 15:49:04', 'no', 'parent', 5, 1),
+(5, 'Trevor', 'user1', 'password', 'me@you.com', '2020-03-09 15:49:39', '::1', 'kid', 3, 0);
 
 --
 -- Indexes for dumped tables
@@ -1057,29 +303,10 @@ ALTER TABLE `tbl_arating`
   ADD PRIMARY KEY (`arating_id`);
 
 --
--- Indexes for table `tbl_cast`
---
-ALTER TABLE `tbl_cast`
-  ADD PRIMARY KEY (`cast_id`),
-  ADD UNIQUE KEY `cast_name` (`cast_name`);
-
---
 -- Indexes for table `tbl_comments`
 --
 ALTER TABLE `tbl_comments`
   ADD PRIMARY KEY (`comments_id`);
-
---
--- Indexes for table `tbl_country`
---
-ALTER TABLE `tbl_country`
-  ADD PRIMARY KEY (`country_id`);
-
---
--- Indexes for table `tbl_director`
---
-ALTER TABLE `tbl_director`
-  ADD PRIMARY KEY (`director_id`);
 
 --
 -- Indexes for table `tbl_genre`
@@ -1088,34 +315,10 @@ ALTER TABLE `tbl_genre`
   ADD PRIMARY KEY (`genre_id`);
 
 --
--- Indexes for table `tbl_language`
---
-ALTER TABLE `tbl_language`
-  ADD PRIMARY KEY (`lang_id`);
-
---
 -- Indexes for table `tbl_movies`
 --
 ALTER TABLE `tbl_movies`
   ADD PRIMARY KEY (`movies_id`);
-
---
--- Indexes for table `tbl_mov_cast`
---
-ALTER TABLE `tbl_mov_cast`
-  ADD PRIMARY KEY (`mov_cast_id`);
-
---
--- Indexes for table `tbl_mov_country`
---
-ALTER TABLE `tbl_mov_country`
-  ADD PRIMARY KEY (`mov_country_id`);
-
---
--- Indexes for table `tbl_mov_director`
---
-ALTER TABLE `tbl_mov_director`
-  ADD PRIMARY KEY (`mov_director_id`);
 
 --
 -- Indexes for table `tbl_mov_genre`
@@ -1124,22 +327,16 @@ ALTER TABLE `tbl_mov_genre`
   ADD PRIMARY KEY (`mov_genre_id`);
 
 --
--- Indexes for table `tbl_mov_lang`
+-- Indexes for table `tbl_music`
 --
-ALTER TABLE `tbl_mov_lang`
-  ADD PRIMARY KEY (`mov_lang_id`);
+ALTER TABLE `tbl_music`
+  ADD PRIMARY KEY (`music_id`);
 
 --
--- Indexes for table `tbl_mov_studio`
+-- Indexes for table `tbl_tv`
 --
-ALTER TABLE `tbl_mov_studio`
-  ADD PRIMARY KEY (`mov_studio_id`);
-
---
--- Indexes for table `tbl_studio`
---
-ALTER TABLE `tbl_studio`
-  ADD PRIMARY KEY (`studio_id`);
+ALTER TABLE `tbl_tv`
+  ADD PRIMARY KEY (`tv_id`);
 
 --
 -- Indexes for table `tbl_urating`
@@ -1164,28 +361,10 @@ ALTER TABLE `tbl_arating`
   MODIFY `arating_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `tbl_cast`
---
-ALTER TABLE `tbl_cast`
-  MODIFY `cast_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
-
---
 -- AUTO_INCREMENT for table `tbl_comments`
 --
 ALTER TABLE `tbl_comments`
   MODIFY `comments_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tbl_country`
---
-ALTER TABLE `tbl_country`
-  MODIFY `country_id` smallint(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=195;
-
---
--- AUTO_INCREMENT for table `tbl_director`
---
-ALTER TABLE `tbl_director`
-  MODIFY `director_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `tbl_genre`
@@ -1194,34 +373,10 @@ ALTER TABLE `tbl_genre`
   MODIFY `genre_id` tinyint(3) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
--- AUTO_INCREMENT for table `tbl_language`
---
-ALTER TABLE `tbl_language`
-  MODIFY `lang_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
-
---
 -- AUTO_INCREMENT for table `tbl_movies`
 --
 ALTER TABLE `tbl_movies`
-  MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `tbl_mov_cast`
---
-ALTER TABLE `tbl_mov_cast`
-  MODIFY `mov_cast_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
-
---
--- AUTO_INCREMENT for table `tbl_mov_country`
---
-ALTER TABLE `tbl_mov_country`
-  MODIFY `mov_country_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
-
---
--- AUTO_INCREMENT for table `tbl_mov_director`
---
-ALTER TABLE `tbl_mov_director`
-  MODIFY `mov_director_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `movies_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `tbl_mov_genre`
@@ -1230,22 +385,16 @@ ALTER TABLE `tbl_mov_genre`
   MODIFY `mov_genre_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
--- AUTO_INCREMENT for table `tbl_mov_lang`
+-- AUTO_INCREMENT for table `tbl_music`
 --
-ALTER TABLE `tbl_mov_lang`
-  MODIFY `mov_lang_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+ALTER TABLE `tbl_music`
+  MODIFY `music_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
--- AUTO_INCREMENT for table `tbl_mov_studio`
+-- AUTO_INCREMENT for table `tbl_tv`
 --
-ALTER TABLE `tbl_mov_studio`
-  MODIFY `mov_studio_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
-
---
--- AUTO_INCREMENT for table `tbl_studio`
---
-ALTER TABLE `tbl_studio`
-  MODIFY `studio_id` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+ALTER TABLE `tbl_tv`
+  MODIFY `tv_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `tbl_urating`
@@ -1257,8 +406,7 @@ ALTER TABLE `tbl_urating`
 -- AUTO_INCREMENT for table `tbl_user`
 --
 ALTER TABLE `tbl_user`
-  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
-COMMIT;
+  MODIFY `user_id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
